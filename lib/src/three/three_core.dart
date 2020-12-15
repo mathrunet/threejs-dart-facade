@@ -17,12 +17,18 @@ import "dart:typed_data"
         Float64List;
 import "package:func2/func.dart";
 import "dart:html"
-    show CanvasElement, ErrorEvent, ImageData, ImageElement, MimeType, ProgressEvent, VRDisplay, VideoElement;
+    show
+        CanvasElement,
+        ErrorEvent,
+        ImageData,
+        ImageElement,
+        MimeType,
+        ProgressEvent,
+        VRDisplay,
+        VideoElement;
 import "dart:web_audio"
     show AudioContext, AudioBufferSourceNode, GainNode, PannerNode;
 import "dart:web_gl" show RenderingContext;
-
-
 
 @JS()
 external String get REVISION;
@@ -461,7 +467,7 @@ external void log(
 @JS()
 class AnimationAction {
   // @Ignore
-  AnimationAction.fakeConstructor$();
+  // AnimationAction.fakeConstructor$();
   external bool get loop;
   external set loop(bool v);
   external num get time;
@@ -514,7 +520,7 @@ class AnimationAction {
 @JS()
 class AnimationClip {
   // @Ignore
-  AnimationClip.fakeConstructor$();
+  // AnimationClip.fakeConstructor$();
   external factory AnimationClip(
       [String name, num duration, List<KeyframeTrack> tracks]);
   external String get name;
@@ -545,7 +551,7 @@ class AnimationClip {
 @JS()
 class AnimationMixer extends EventDispatcher {
   // @Ignore
-  AnimationMixer.fakeConstructor$() : super.fakeConstructor$();
+  // AnimationMixer.fakeConstructor$() : super.fakeConstructor$();
   external factory AnimationMixer(dynamic root);
   external num get time;
   external set time(num v);
@@ -564,7 +570,7 @@ class AnimationMixer extends EventDispatcher {
 @JS()
 class AnimationObjectGroup {
   // @Ignore
-  AnimationObjectGroup.fakeConstructor$();
+  // AnimationObjectGroup.fakeConstructor$();
   external factory AnimationObjectGroup(
       [dynamic args1,
       dynamic args2,
@@ -583,14 +589,15 @@ class AnimationObjectGroup {
     }*/
       get stats;
   external set stats(
-      dynamic /*{
+      dynamic
+          /*{
         bindingsPerObject: number;
         objects: {
             total: number;
             inUse: number;
         }
     }*/
-      v);
+          v);
   external void add(
       [dynamic args1,
       dynamic args2,
@@ -631,7 +638,7 @@ external void flattenJSON(List<String> jsonKeys, List<dynamic> times,
 @JS()
 class KeyframeTrack {
   // @Ignore
-  KeyframeTrack.fakeConstructor$();
+  // KeyframeTrack.fakeConstructor$();
   external factory KeyframeTrack(String name, List<dynamic> times,
       List<dynamic> values, num /*enum InterpolationModes*/ interpolation);
   external String get name;
@@ -666,7 +673,7 @@ class KeyframeTrack {
 @JS()
 class PropertyBinding {
   // @Ignore
-  PropertyBinding.fakeConstructor$();
+  // PropertyBinding.fakeConstructor$();
   external factory PropertyBinding(dynamic rootNode, String path,
       [dynamic parsedPath]);
   external String get path;
@@ -700,7 +707,7 @@ class PropertyBinding {
 @JS("PropertyBinding.Composite")
 class Composite {
   // @Ignore
-  Composite.fakeConstructor$();
+  // Composite.fakeConstructor$();
   external factory Composite(dynamic targetGroup, dynamic path,
       [dynamic parsedPath]);
   external dynamic getValue(dynamic array, num offset);
@@ -713,7 +720,7 @@ class Composite {
 @JS()
 class PropertyMixer {
   // @Ignore
-  PropertyMixer.fakeConstructor$();
+  // PropertyMixer.fakeConstructor$();
   external factory PropertyMixer(
       dynamic binding, String typeName, num valueSize);
   external dynamic get binding;
@@ -737,7 +744,7 @@ class PropertyMixer {
 @JS()
 class BooleanKeyframeTrack extends KeyframeTrack {
   // @Ignore
-  BooleanKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
+  // BooleanKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
   external factory BooleanKeyframeTrack(
       String name, List<dynamic> times, List<dynamic> values);
 }
@@ -745,7 +752,7 @@ class BooleanKeyframeTrack extends KeyframeTrack {
 @JS()
 class ColorKeyframeTrack extends KeyframeTrack {
   // @Ignore
-  ColorKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
+  // ColorKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
   external factory ColorKeyframeTrack(String name, List<dynamic> times,
       List<dynamic> values, num /*enum InterpolationModes*/ interpolation);
 }
@@ -753,7 +760,7 @@ class ColorKeyframeTrack extends KeyframeTrack {
 @JS()
 class NumberKeyframeTrack extends KeyframeTrack {
   // @Ignore
-  NumberKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
+  // NumberKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
   external factory NumberKeyframeTrack(String name, List<dynamic> times,
       List<dynamic> values, num /*enum InterpolationModes*/ interpolation);
 }
@@ -761,7 +768,7 @@ class NumberKeyframeTrack extends KeyframeTrack {
 @JS()
 class QuaternionKeyframeTrack extends KeyframeTrack {
   // @Ignore
-  QuaternionKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
+  // QuaternionKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
   external factory QuaternionKeyframeTrack(String name, List<dynamic> times,
       List<dynamic> values, num /*enum InterpolationModes*/ interpolation);
 }
@@ -769,7 +776,7 @@ class QuaternionKeyframeTrack extends KeyframeTrack {
 @JS()
 class StringKeyframeTrack extends KeyframeTrack {
   // @Ignore
-  StringKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
+  // StringKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
   external factory StringKeyframeTrack(String name, List<dynamic> times,
       List<dynamic> values, num /*enum InterpolationModes*/ interpolation);
 }
@@ -777,7 +784,7 @@ class StringKeyframeTrack extends KeyframeTrack {
 @JS()
 class VectorKeyframeTrack extends KeyframeTrack {
   // @Ignore
-  VectorKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
+  // VectorKeyframeTrack.fakeConstructor$() : super.fakeConstructor$();
   external factory VectorKeyframeTrack(String name, List<dynamic> times,
       List<dynamic> values, num /*enum InterpolationModes*/ interpolation);
 }
@@ -788,7 +795,7 @@ class VectorKeyframeTrack extends KeyframeTrack {
 @JS()
 class Camera extends Object3D {
   // @Ignore
-  Camera.fakeConstructor$() : super.fakeConstructor$();
+  // Camera.fakeConstructor$() : super.fakeConstructor$();
 
   /// This constructor sets following properties to the correct type: matrixWorldInverse, projectionMatrix and projectionMatrixInverse.
   external factory Camera();
@@ -806,7 +813,7 @@ class Camera extends Object3D {
 @JS()
 class CubeCamera extends Object3D {
   // @Ignore
-  CubeCamera.fakeConstructor$() : super.fakeConstructor$();
+  // CubeCamera.fakeConstructor$() : super.fakeConstructor$();
   external factory CubeCamera([num near, num far, num cubeResolution]);
   external WebGLRenderTargetCube get renderTarget;
   external set renderTarget(WebGLRenderTargetCube v);
@@ -824,7 +831,7 @@ class CubeCamera extends Object3D {
 @JS()
 class OrthographicCamera extends Camera {
   // @Ignore
-  OrthographicCamera.fakeConstructor$() : super.fakeConstructor$();
+  // OrthographicCamera.fakeConstructor$() : super.fakeConstructor$();
   external factory OrthographicCamera(num left, num right, num top, num bottom,
       [num near, num far]);
   external num get zoom;
@@ -841,7 +848,8 @@ class OrthographicCamera extends Camera {
     }*/
       get view;
   external set view(
-      dynamic /*{
+      dynamic
+          /*{
         enabled: boolean,
         fullWidth: number,
         fullHeight: number,
@@ -850,7 +858,7 @@ class OrthographicCamera extends Camera {
         width: number,
         height: number
     }*/
-      v);
+          v);
 
   /// Camera frustum left plane.
   external num get left;
@@ -892,7 +900,7 @@ class OrthographicCamera extends Camera {
 @JS()
 class PerspectiveCamera extends Camera {
   // @Ignore
-  PerspectiveCamera.fakeConstructor$() : super.fakeConstructor$();
+  // PerspectiveCamera.fakeConstructor$() : super.fakeConstructor$();
   external factory PerspectiveCamera([num fov, num aspect, num near, num far]);
   external num get zoom;
   external set zoom(num v);
@@ -926,7 +934,8 @@ class PerspectiveCamera extends Camera {
     }*/
       get view;
   external set view(
-      dynamic /*{
+      dynamic
+          /*{
         enabled: boolean,
         fullWidth: number,
         fullHeight: number,
@@ -935,7 +944,7 @@ class PerspectiveCamera extends Camera {
         width: number,
         height: number
     }*/
-      v);
+          v);
   external num get filmGauge;
   external set filmGauge(num v);
   external num get filmOffset;
@@ -985,7 +994,7 @@ class PerspectiveCamera extends Camera {
 @JS()
 class StereoCamera extends Camera {
   // @Ignore
-  StereoCamera.fakeConstructor$() : super.fakeConstructor$();
+  // StereoCamera.fakeConstructor$() : super.fakeConstructor$();
   external factory StereoCamera();
   external num get aspect;
   external set aspect(num v);
@@ -1001,7 +1010,7 @@ class StereoCamera extends Camera {
 @JS()
 class ArrayCamera extends PerspectiveCamera {
   // @Ignore
-  ArrayCamera.fakeConstructor$() : super.fakeConstructor$();
+  // ArrayCamera.fakeConstructor$() : super.fakeConstructor$();
   external factory ArrayCamera([List<PerspectiveCamera> cameras]);
   external List<PerspectiveCamera> get cameras;
   external set cameras(List<PerspectiveCamera> v);
@@ -1015,7 +1024,7 @@ class ArrayCamera extends PerspectiveCamera {
 @JS()
 class BufferAttribute {
   // @Ignore
-  BufferAttribute.fakeConstructor$();
+  // BufferAttribute.fakeConstructor$();
   external factory BufferAttribute(List<num> array, num itemSize,
       [bool normalized]);
   external String get uuid;
@@ -1076,7 +1085,7 @@ class BufferAttribute {
 @JS()
 class Int8Attribute extends BufferAttribute {
   // @Ignore
-  Int8Attribute.fakeConstructor$() : super.fakeConstructor$();
+  // Int8Attribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Int8Attribute(dynamic array, num itemSize);
 }
 
@@ -1084,7 +1093,7 @@ class Int8Attribute extends BufferAttribute {
 @JS()
 class Uint8Attribute extends BufferAttribute {
   // @Ignore
-  Uint8Attribute.fakeConstructor$() : super.fakeConstructor$();
+  // Uint8Attribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint8Attribute(dynamic array, num itemSize);
 }
 
@@ -1092,7 +1101,7 @@ class Uint8Attribute extends BufferAttribute {
 @JS()
 class Uint8ClampedAttribute extends BufferAttribute {
   // @Ignore
-  Uint8ClampedAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // Uint8ClampedAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint8ClampedAttribute(dynamic array, num itemSize);
 }
 
@@ -1100,7 +1109,7 @@ class Uint8ClampedAttribute extends BufferAttribute {
 @JS()
 class Int16Attribute extends BufferAttribute {
   // @Ignore
-  Int16Attribute.fakeConstructor$() : super.fakeConstructor$();
+  // Int16Attribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Int16Attribute(dynamic array, num itemSize);
 }
 
@@ -1108,7 +1117,7 @@ class Int16Attribute extends BufferAttribute {
 @JS()
 class Uint16Attribute extends BufferAttribute {
   // @Ignore
-  Uint16Attribute.fakeConstructor$() : super.fakeConstructor$();
+  // Uint16Attribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint16Attribute(dynamic array, num itemSize);
 }
 
@@ -1116,7 +1125,7 @@ class Uint16Attribute extends BufferAttribute {
 @JS()
 class Int32Attribute extends BufferAttribute {
   // @Ignore
-  Int32Attribute.fakeConstructor$() : super.fakeConstructor$();
+  // Int32Attribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Int32Attribute(dynamic array, num itemSize);
 }
 
@@ -1124,7 +1133,7 @@ class Int32Attribute extends BufferAttribute {
 @JS()
 class Uint32Attribute extends BufferAttribute {
   // @Ignore
-  Uint32Attribute.fakeConstructor$() : super.fakeConstructor$();
+  // Uint32Attribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint32Attribute(dynamic array, num itemSize);
 }
 
@@ -1132,7 +1141,7 @@ class Uint32Attribute extends BufferAttribute {
 @JS()
 class Float32Attribute extends BufferAttribute {
   // @Ignore
-  Float32Attribute.fakeConstructor$() : super.fakeConstructor$();
+  // Float32Attribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Float32Attribute(dynamic array, num itemSize);
 }
 
@@ -1140,14 +1149,14 @@ class Float32Attribute extends BufferAttribute {
 @JS()
 class Float64Attribute extends BufferAttribute {
   // @Ignore
-  Float64Attribute.fakeConstructor$() : super.fakeConstructor$();
+  // Float64Attribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Float64Attribute(dynamic array, num itemSize);
 }
 
 @JS()
 class Int8BufferAttribute extends BufferAttribute {
   // @Ignore
-  Int8BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // Int8BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Int8BufferAttribute(
       dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
@@ -1156,7 +1165,7 @@ class Int8BufferAttribute extends BufferAttribute {
 @JS()
 class Uint8BufferAttribute extends BufferAttribute {
   // @Ignore
-  Uint8BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // Uint8BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint8BufferAttribute(
       dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
@@ -1165,7 +1174,7 @@ class Uint8BufferAttribute extends BufferAttribute {
 @JS()
 class Uint8ClampedBufferAttribute extends BufferAttribute {
   // @Ignore
-  Uint8ClampedBufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // Uint8ClampedBufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint8ClampedBufferAttribute(
       dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
@@ -1174,7 +1183,7 @@ class Uint8ClampedBufferAttribute extends BufferAttribute {
 @JS()
 class Int16BufferAttribute extends BufferAttribute {
   // @Ignore
-  Int16BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // Int16BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Int16BufferAttribute(
       dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
@@ -1183,7 +1192,7 @@ class Int16BufferAttribute extends BufferAttribute {
 @JS()
 class Uint16BufferAttribute extends BufferAttribute {
   // @Ignore
-  Uint16BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // Uint16BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint16BufferAttribute(
       dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
@@ -1192,7 +1201,7 @@ class Uint16BufferAttribute extends BufferAttribute {
 @JS()
 class Int32BufferAttribute extends BufferAttribute {
   // @Ignore
-  Int32BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // Int32BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Int32BufferAttribute(
       dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
@@ -1201,7 +1210,7 @@ class Int32BufferAttribute extends BufferAttribute {
 @JS()
 class Uint32BufferAttribute extends BufferAttribute {
   // @Ignore
-  Uint32BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // Uint32BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint32BufferAttribute(
       dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
@@ -1210,7 +1219,7 @@ class Uint32BufferAttribute extends BufferAttribute {
 @JS()
 class Float32BufferAttribute extends BufferAttribute {
   // @Ignore
-  Float32BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // Float32BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Float32BufferAttribute(
       dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
@@ -1219,7 +1228,7 @@ class Float32BufferAttribute extends BufferAttribute {
 @JS()
 class Float64BufferAttribute extends BufferAttribute {
   // @Ignore
-  Float64BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // Float64BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Float64BufferAttribute(
       dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
@@ -1229,7 +1238,9 @@ class Float64BufferAttribute extends BufferAttribute {
 @JS()
 class DynamicBufferAttribute extends BufferAttribute {
   // @Ignore
-  DynamicBufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // DynamicBufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  external factory DynamicBufferAttribute(List<num> array, num itemSize,
+      [bool normalized]);
 }
 
 /// This is a superefficent class for geometries because it saves all data in buffers.
@@ -1239,7 +1250,7 @@ class DynamicBufferAttribute extends BufferAttribute {
 @JS()
 class BufferGeometry extends EventDispatcher {
   // @Ignore
-  BufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // BufferGeometry.fakeConstructor$() : super.fakeConstructor$();
 
   /// This creates a new BufferGeometry. It also sets several properties to an default value.
   external factory BufferGeometry();
@@ -1266,8 +1277,8 @@ class BufferGeometry extends EventDispatcher {
           dynamic /*{start: number, count: number, materialIndex?: number}*/ >
       get groups;
   external set groups(
-      List<
-          dynamic /*{start: number, count: number, materialIndex?: number}*/ > v);
+      List<dynamic /*{start: number, count: number, materialIndex?: number}*/ >
+          v);
   external Box3 get boundingBox;
   external set boundingBox(Box3 v);
   external Sphere get boundingSphere;
@@ -1350,7 +1361,7 @@ class BufferGeometry extends EventDispatcher {
 @JS()
 class Clock {
   // @Ignore
-  Clock.fakeConstructor$();
+  // Clock.fakeConstructor$();
   external factory Clock([bool autoStart]);
 
   /// If set, starts the clock automatically when the first update is called.
@@ -1393,7 +1404,7 @@ class Clock {
 @JS()
 class DirectGeometry extends EventDispatcher {
   // @Ignore
-  DirectGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // DirectGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory DirectGeometry();
   external num get id;
   external set id(num v);
@@ -1469,7 +1480,7 @@ class DirectGeometry extends EventDispatcher {
 @JS()
 class EventDispatcher {
   // @Ignore
-  EventDispatcher.fakeConstructor$();
+  // EventDispatcher.fakeConstructor$();
 
   /// Creates eventDispatcher object. It needs to be call with '.call' to add the functionality to an object.
   external factory EventDispatcher();
@@ -1507,7 +1518,7 @@ abstract class Event {
 @JS()
 class Face3 {
   // @Ignore
-  Face3.fakeConstructor$();
+  // Face3.fakeConstructor$();
   /*external factory Face3(num a, num b, num c, [Vector3 normal, Color color, num materialIndex]);*/
   /*external factory Face3(num a, num b, num c, [Vector3 normal, List<Color> vertexColors, num materialIndex]);*/
   /*external factory Face3(num a, num b, num c, [List<Vector3> vertexNormals, Color color, num materialIndex]);*/
@@ -1556,7 +1567,11 @@ class Face3 {
 @JS()
 class Face4 extends Face3 {
   // @Ignore
-  Face4.fakeConstructor$() : super.fakeConstructor$();
+  // Face4.fakeConstructor$() : super.fakeConstructor$();
+  external factory Face4(num a, num b, num c,
+      [dynamic /*Vector3|List<Vector3>*/ normal_vertexNormals,
+      dynamic /*Color|List<Color>*/ color_vertexColors,
+      num materialIndex]);
 }
 
 @anonymous
@@ -1606,7 +1621,7 @@ external set GeometryIdCount(num v);
 @JS()
 class Geometry extends EventDispatcher {
   // @Ignore
-  Geometry.fakeConstructor$() : super.fakeConstructor$();
+  // Geometry.fakeConstructor$() : super.fakeConstructor$();
   external factory Geometry();
 
   /// Unique number of this geometry instance
@@ -1781,7 +1796,7 @@ external dynamic center(dynamic geometry);
 @JS()
 class InstancedBufferAttribute extends BufferAttribute {
   // @Ignore
-  InstancedBufferAttribute.fakeConstructor$() : super.fakeConstructor$();
+  // InstancedBufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory InstancedBufferAttribute(List<num> data, num itemSize,
       [num meshPerAttribute]);
   external num get meshPerAttribute;
@@ -1792,7 +1807,7 @@ class InstancedBufferAttribute extends BufferAttribute {
 @JS()
 class InstancedBufferGeometry extends BufferGeometry {
   // @Ignore
-  InstancedBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // InstancedBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory InstancedBufferGeometry();
   external List<dynamic /*{start: number, count: number, instances: number}*/ >
       get groups;
@@ -1807,7 +1822,7 @@ class InstancedBufferGeometry extends BufferGeometry {
 @JS()
 class InterleavedBuffer {
   // @Ignore
-  InterleavedBuffer.fakeConstructor$();
+  // InterleavedBuffer.fakeConstructor$();
   external factory InterleavedBuffer(List<num> array, num stride);
   external List<num> get array;
   external set array(List<num> v);
@@ -1836,12 +1851,11 @@ class InterleavedBuffer {
   external InterleavedBuffer JS$set(List<num> value, num index);
 }
 
-
 /// @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InstancedInterleavedBuffer.js">src/core/InstancedInterleavedBuffer.js</a>
 @JS()
 class InstancedInterleavedBuffer extends InterleavedBuffer {
   // @Ignore
-  InstancedInterleavedBuffer.fakeConstructor$() : super.fakeConstructor$();
+  // InstancedInterleavedBuffer.fakeConstructor$() : super.fakeConstructor$();
   external factory InstancedInterleavedBuffer(List<num> array, num stride,
       [num meshPerAttribute]);
   external num get meshPerAttribute;
@@ -1852,7 +1866,7 @@ class InstancedInterleavedBuffer extends InterleavedBuffer {
 @JS()
 class InterleavedBufferAttribute {
   // @Ignore
-  InterleavedBufferAttribute.fakeConstructor$();
+  // InterleavedBufferAttribute.fakeConstructor$();
   external factory InterleavedBufferAttribute(
       InterleavedBuffer interleavedBuffer, num itemSize, num offset,
       [bool normalized]);
@@ -1897,7 +1911,7 @@ external set Object3DIdCount(num v);
 @JS()
 class Object3D extends EventDispatcher {
   // @Ignore
-  Object3D.fakeConstructor$() : super.fakeConstructor$();
+  // Object3D.fakeConstructor$() : super.fakeConstructor$();
   external factory Object3D();
 
   /// Unique number of this object instance.
@@ -1995,9 +2009,10 @@ class Object3D extends EventDispatcher {
                      material: Material, group: Group) => void*/
       get onBeforeRender;
   external set onBeforeRender(
-      Function /*(renderer: WebGLRenderer, scene: Scene, camera: Camera, geometry: Geometry | BufferGeometry,
+      Function
+          /*(renderer: WebGLRenderer, scene: Scene, camera: Camera, geometry: Geometry | BufferGeometry,
                      material: Material, group: Group) => void*/
-      v);
+          v);
 
   /// Calls after rendering object
   external Function
@@ -2005,9 +2020,10 @@ class Object3D extends EventDispatcher {
                     material: Material, group: Group) => void*/
       get onAfterRender;
   external set onAfterRender(
-      Function /*(renderer: WebGLRenderer, scene: Scene, camera: Camera, geometry: Geometry | BufferGeometry,
+      Function
+          /*(renderer: WebGLRenderer, scene: Scene, camera: Camera, geometry: Geometry | BufferGeometry,
                     material: Material, group: Group) => void*/
-      v);
+          v);
   external static Vector3 get DefaultUp;
   external static set DefaultUp(Vector3 v);
   external static bool get DefaultMatrixAutoUpdate;
@@ -2142,7 +2158,7 @@ abstract class RaycasterParameters {
 @JS()
 class Raycaster {
   // @Ignore
-  Raycaster.fakeConstructor$();
+  // Raycaster.fakeConstructor$();
 
   /// This creates a new raycaster object.
   external factory Raycaster(
@@ -2187,7 +2203,7 @@ class Raycaster {
 @JS()
 class Layers {
   // @Ignore
-  Layers.fakeConstructor$();
+  // Layers.fakeConstructor$();
   external factory Layers();
   external num get mask;
   external set mask(num v);
@@ -2201,7 +2217,7 @@ class Layers {
 @JS()
 class Font {
   // @Ignore
-  Font.fakeConstructor$();
+  // Font.fakeConstructor$();
   external factory Font(dynamic jsondata);
   external String get data;
   external set data(String v);
@@ -2214,7 +2230,7 @@ class Font {
 @JS()
 class Light extends Object3D {
   // @Ignore
-  Light.fakeConstructor$() : super.fakeConstructor$();
+  // Light.fakeConstructor$() : super.fakeConstructor$();
   external factory Light([dynamic /*num|String*/ hex, num intensity]);
   external Color get color;
   external set color(Color v);
@@ -2269,7 +2285,7 @@ class Light extends Object3D {
 @JS()
 class LightShadow {
   // @Ignore
-  LightShadow.fakeConstructor$();
+  // LightShadow.fakeConstructor$();
   external factory LightShadow(Camera camera);
   external Camera get camera;
   external set camera(covariant Camera v);
@@ -2296,7 +2312,7 @@ class LightShadow {
 @JS()
 class AmbientLight extends Light {
   // @Ignore
-  AmbientLight.fakeConstructor$() : super.fakeConstructor$();
+  // AmbientLight.fakeConstructor$() : super.fakeConstructor$();
 
   /// This creates a Ambientlight with a color.
   external factory AmbientLight(
@@ -2315,7 +2331,7 @@ class AmbientLight extends Light {
 @JS()
 class DirectionalLight extends Light {
   // @Ignore
-  DirectionalLight.fakeConstructor$() : super.fakeConstructor$();
+  // DirectionalLight.fakeConstructor$() : super.fakeConstructor$();
   external factory DirectionalLight(
       [dynamic /*Color|String|num*/ color, num intensity]);
 
@@ -2334,7 +2350,8 @@ class DirectionalLight extends Light {
 @JS()
 class DirectionalLightShadow extends LightShadow {
   // @Ignore
-  DirectionalLightShadow.fakeConstructor$() : super.fakeConstructor$();
+  // DirectionalLightShadow.fakeConstructor$() : super.fakeConstructor$();
+  external factory DirectionalLightShadow(Camera camera);
   external OrthographicCamera get camera;
   external set camera(OrthographicCamera v);
 }
@@ -2342,7 +2359,7 @@ class DirectionalLightShadow extends LightShadow {
 @JS()
 class HemisphereLight extends Light {
   // @Ignore
-  HemisphereLight.fakeConstructor$() : super.fakeConstructor$();
+  // HemisphereLight.fakeConstructor$() : super.fakeConstructor$();
   external factory HemisphereLight(
       [dynamic /*Color|String|num*/ skyColor,
       dynamic /*Color|String|num*/ groundColor,
@@ -2363,7 +2380,7 @@ class HemisphereLight extends Light {
 @JS()
 class PointLight extends Light {
   // @Ignore
-  PointLight.fakeConstructor$() : super.fakeConstructor$();
+  // PointLight.fakeConstructor$() : super.fakeConstructor$();
   external factory PointLight(
       [dynamic /*Color|String|num*/ color,
       num intensity,
@@ -2390,7 +2407,8 @@ class PointLight extends Light {
 @JS()
 class PointLightShadow extends LightShadow {
   // @Ignore
-  PointLightShadow.fakeConstructor$() : super.fakeConstructor$();
+  // PointLightShadow.fakeConstructor$() : super.fakeConstructor$();
+  external factory PointLightShadow(Camera camera);
   external PerspectiveCamera get camera;
   external set camera(PerspectiveCamera v);
 }
@@ -2399,7 +2417,7 @@ class PointLightShadow extends LightShadow {
 @JS()
 class SpotLight extends Light {
   // @Ignore
-  SpotLight.fakeConstructor$() : super.fakeConstructor$();
+  // SpotLight.fakeConstructor$() : super.fakeConstructor$();
   external factory SpotLight(
       [dynamic /*Color|String|num*/ color,
       num intensity,
@@ -2445,7 +2463,8 @@ class SpotLight extends Light {
 @JS()
 class SpotLightShadow extends LightShadow {
   // @Ignore
-  SpotLightShadow.fakeConstructor$() : super.fakeConstructor$();
+  // SpotLightShadow.fakeConstructor$() : super.fakeConstructor$();
+  external factory SpotLightShadow(Camera camera);
   external PerspectiveCamera get camera;
   external set camera(PerspectiveCamera v);
   external void update(Light light);
@@ -2464,7 +2483,7 @@ class SpotLightShadow extends LightShadow {
 @JS()
 class Loader {
   // @Ignore
-  Loader.fakeConstructor$();
+  // Loader.fakeConstructor$();
   external factory Loader();
 
   /// Will be called when load starts.
@@ -2520,7 +2539,7 @@ abstract class LoaderHandler {
 @JS()
 class FileLoader {
   // @Ignore
-  FileLoader.fakeConstructor$();
+  // FileLoader.fakeConstructor$();
   external factory FileLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2545,7 +2564,7 @@ class FileLoader {
 @JS()
 class FontLoader {
   // @Ignore
-  FontLoader.fakeConstructor$();
+  // FontLoader.fakeConstructor$();
   external factory FontLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2561,7 +2580,7 @@ class FontLoader {
 @JS()
 class ImageLoader {
   // @Ignore
-  ImageLoader.fakeConstructor$();
+  // ImageLoader.fakeConstructor$();
   external factory ImageLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2586,7 +2605,7 @@ class ImageLoader {
 @JS()
 class JSONLoader extends Loader {
   // @Ignore
-  JSONLoader.fakeConstructor$() : super.fakeConstructor$();
+  // JSONLoader.fakeConstructor$() : super.fakeConstructor$();
   external factory JSONLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2606,7 +2625,7 @@ class JSONLoader extends Loader {
 @JS()
 class LoadingManager {
   // @Ignore
-  LoadingManager.fakeConstructor$();
+  // LoadingManager.fakeConstructor$();
   external factory LoadingManager(
       [void onLoad(),
       void onProgress(String url, num loaded, num total),
@@ -2640,7 +2659,7 @@ external LoadingManager get DefaultLoadingManager;
 @JS()
 class BufferGeometryLoader {
   // @Ignore
-  BufferGeometryLoader.fakeConstructor$();
+  // BufferGeometryLoader.fakeConstructor$();
   external factory BufferGeometryLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2652,7 +2671,7 @@ class BufferGeometryLoader {
 @JS()
 class MaterialLoader {
   // @Ignore
-  MaterialLoader.fakeConstructor$();
+  // MaterialLoader.fakeConstructor$();
   external factory MaterialLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2669,7 +2688,7 @@ class MaterialLoader {
 @JS()
 class ObjectLoader {
   // @Ignore
-  ObjectLoader.fakeConstructor$();
+  // ObjectLoader.fakeConstructor$();
   external factory ObjectLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2700,7 +2719,7 @@ class ObjectLoader {
 @JS()
 class TextureLoader {
   // @Ignore
-  TextureLoader.fakeConstructor$();
+  // TextureLoader.fakeConstructor$();
   external factory TextureLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2724,7 +2743,7 @@ class TextureLoader {
 @JS()
 class CubeTextureLoader {
   // @Ignore
-  CubeTextureLoader.fakeConstructor$();
+  // CubeTextureLoader.fakeConstructor$();
   external factory CubeTextureLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2743,7 +2762,7 @@ class CubeTextureLoader {
 @JS()
 class DataTextureLoader {
   // @Ignore
-  DataTextureLoader.fakeConstructor$();
+  // DataTextureLoader.fakeConstructor$();
   external factory DataTextureLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2755,13 +2774,14 @@ class DataTextureLoader {
 @JS()
 class BinaryTextureLoader extends DataTextureLoader {
   // @Ignore
-  BinaryTextureLoader.fakeConstructor$() : super.fakeConstructor$();
+  // BinaryTextureLoader.fakeConstructor$() : super.fakeConstructor$();
+  external factory BinaryTextureLoader([LoadingManager manager]);
 }
 
 @JS()
 class CompressedTextureLoader {
   // @Ignore
-  CompressedTextureLoader.fakeConstructor$();
+  // CompressedTextureLoader.fakeConstructor$();
   external factory CompressedTextureLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -2775,7 +2795,7 @@ class CompressedTextureLoader {
 @JS()
 class AudioLoader {
   // @Ignore
-  AudioLoader.fakeConstructor$();
+  // AudioLoader.fakeConstructor$();
   external factory AudioLoader([LoadingManager manager]);
   external void load(
       String url, Function onLoad, Function onPrgress, Function onError);
@@ -2803,7 +2823,7 @@ external void clear();
 @JS()
 class LoaderUtils {
   // @Ignore
-  LoaderUtils.fakeConstructor$();
+  // LoaderUtils.fakeConstructor$();
   external static String decodeText(
       dynamic /*Int8List|Uint8List|Uint8ClampedList|Int16List|Uint16List|Int32List|Uint32List|Float32List|Float64List*/ array);
   external static String extractUrlBase(String url);
@@ -2919,7 +2939,7 @@ abstract class MaterialParameters {
 @JS()
 class Material extends EventDispatcher {
   // @Ignore
-  Material.fakeConstructor$() : super.fakeConstructor$();
+  // Material.fakeConstructor$() : super.fakeConstructor$();
   external factory Material();
 
   /// Sets the alpha value to be used when running an alpha test. Default is 0.
@@ -3148,7 +3168,7 @@ abstract class LineBasicMaterialParameters implements MaterialParameters {
 @JS()
 class LineBasicMaterial extends Material {
   // @Ignore
-  LineBasicMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // LineBasicMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory LineBasicMaterial([LineBasicMaterialParameters parameters]);
   external Color get color;
   external set color(Color v);
@@ -3216,7 +3236,7 @@ abstract class LineDashedMaterialParameters implements MaterialParameters {
 @JS()
 class LineDashedMaterial extends Material {
   // @Ignore
-  LineDashedMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // LineDashedMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory LineDashedMaterial(
       [LineDashedMaterialParameters parameters]);
   external Color get color;
@@ -3323,7 +3343,7 @@ abstract class MeshBasicMaterialParameters implements MaterialParameters {
 @JS()
 class MeshBasicMaterial extends Material {
   // @Ignore
-  MeshBasicMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // MeshBasicMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory MeshBasicMaterial([MeshBasicMaterialParameters parameters]);
   external Color get color;
   external set color(Color v);
@@ -3406,7 +3426,7 @@ abstract class MeshDepthMaterialParameters implements MaterialParameters {
 @JS()
 class MeshDepthMaterial extends Material {
   // @Ignore
-  MeshDepthMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // MeshDepthMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory MeshDepthMaterial([MeshDepthMaterialParameters parameters]);
   external bool get wireframe;
   external set wireframe(bool v);
@@ -3521,7 +3541,7 @@ abstract class MeshLambertMaterialParameters implements MaterialParameters {
 @JS()
 class MeshLambertMaterial extends Material {
   // @Ignore
-  MeshLambertMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // MeshLambertMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory MeshLambertMaterial(
       [MeshLambertMaterialParameters parameters]);
   external Color get color;
@@ -3698,7 +3718,7 @@ abstract class MeshStandardMaterialParameters implements MaterialParameters {
 @JS()
 class MeshStandardMaterial extends Material {
   // @Ignore
-  MeshStandardMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // MeshStandardMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory MeshStandardMaterial(
       [MeshStandardMaterialParameters parameters]);
   external dynamic get defines;
@@ -3816,7 +3836,7 @@ abstract class MeshNormalMaterialParameters implements MaterialParameters {
 @JS()
 class MeshNormalMaterial extends Material {
   // @Ignore
-  MeshNormalMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // MeshNormalMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory MeshNormalMaterial(
       [MeshNormalMaterialParameters parameters]);
   external bool get wireframe;
@@ -3964,7 +3984,7 @@ abstract class MeshPhongMaterialParameters implements MaterialParameters {
 @JS()
 class MeshPhongMaterial extends Material {
   // @Ignore
-  MeshPhongMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // MeshPhongMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory MeshPhongMaterial([MeshPhongMaterialParameters parameters]);
   external Color get color;
   external set color(Color v);
@@ -4114,7 +4134,7 @@ abstract class MeshPhysicalMaterialParameters
 @JS()
 class MeshPhysicalMaterial extends MeshStandardMaterial {
   // @Ignore
-  MeshPhysicalMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // MeshPhysicalMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory MeshPhysicalMaterial(
       MeshPhysicalMaterialParameters parameters);
   external dynamic get defines;
@@ -4133,7 +4153,7 @@ class MeshPhysicalMaterial extends MeshStandardMaterial {
 @JS()
 class MultiMaterial extends Material {
   // @Ignore
-  MultiMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // MultiMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory MultiMaterial([List<Material> materials]);
   external get isMultiMaterial;
   external set isMultiMaterial(v);
@@ -4146,7 +4166,8 @@ class MultiMaterial extends Material {
 @JS()
 class MeshFaceMaterial extends MultiMaterial {
   // @Ignore
-  MeshFaceMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // MeshFaceMaterial.fakeConstructor$() : super.fakeConstructor$();
+  external factory MeshFaceMaterial([List<Material> materials]);
 }
 
 @anonymous
@@ -4201,7 +4222,7 @@ abstract class PointsMaterialParameters implements MaterialParameters {
 @JS()
 class PointsMaterial extends Material {
   // @Ignore
-  PointsMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // PointsMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory PointsMaterial([PointsMaterialParameters parameters]);
   external Color get color;
   external set color(Color v);
@@ -4218,21 +4239,24 @@ class PointsMaterial extends Material {
 @JS()
 class PointCloudMaterial extends PointsMaterial {
   // @Ignore
-  PointCloudMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // PointCloudMaterial.fakeConstructor$() : super.fakeConstructor$();
+  external factory PointCloudMaterial([PointsMaterialParameters parameters]);
 }
 
 /// Use [PointsMaterial THREE.PointsMaterial] instead
 @JS()
 class ParticleBasicMaterial extends PointsMaterial {
   // @Ignore
-  ParticleBasicMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // ParticleBasicMaterial.fakeConstructor$() : super.fakeConstructor$();
+  external factory ParticleBasicMaterial([PointsMaterialParameters parameters]);
 }
 
 /// Use [PointsMaterial THREE.PointsMaterial] instead
 @JS()
 class ParticleSystemMaterial extends PointsMaterial {
   // @Ignore
-  ParticleSystemMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // ParticleSystemMaterial.fakeConstructor$() : super.fakeConstructor$();
+  external factory ParticleSystemMaterial([PointsMaterialParameters parameters]);
 }
 
 @anonymous
@@ -4310,7 +4334,7 @@ abstract class ShaderMaterialParameters implements MaterialParameters {
 @JS()
 class ShaderMaterial extends Material {
   // @Ignore
-  ShaderMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // ShaderMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory ShaderMaterial([ShaderMaterialParameters parameters]);
   external dynamic get defines;
   external set defines(dynamic v);
@@ -4354,7 +4378,7 @@ class ShaderMaterial extends Material {
 @JS()
 class RawShaderMaterial extends ShaderMaterial {
   // @Ignore
-  RawShaderMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // RawShaderMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory RawShaderMaterial([ShaderMaterialParameters parameters]);
 }
 
@@ -4407,7 +4431,7 @@ abstract class SpriteMaterialParameters implements MaterialParameters {
 @JS()
 class SpriteMaterial extends Material {
   // @Ignore
-  SpriteMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // SpriteMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory SpriteMaterial([SpriteMaterialParameters parameters]);
   external Color get color;
   external set color(Color v);
@@ -4421,7 +4445,7 @@ class SpriteMaterial extends Material {
 @JS()
 class ShadowMaterial extends ShaderMaterial {
   // @Ignore
-  ShadowMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // ShadowMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory ShadowMaterial([ShaderMaterialParameters parameters]);
 }
 
@@ -4429,7 +4453,7 @@ class ShadowMaterial extends ShaderMaterial {
 @JS()
 class Box2 {
   // @Ignore
-  Box2.fakeConstructor$();
+  // Box2.fakeConstructor$();
   external factory Box2([Vector2 min, Vector2 max]);
   external Vector2 get max;
   external set max(Vector2 v);
@@ -4468,7 +4492,7 @@ class Box2 {
 @JS()
 class Box3 {
   // @Ignore
-  Box3.fakeConstructor$();
+  // Box3.fakeConstructor$();
   external factory Box3([Vector3 min, Vector3 max]);
   external Vector3 get max;
   external set max(Vector3 v);
@@ -4533,7 +4557,7 @@ abstract class HSL {
 @JS()
 class Color {
   // @Ignore
-  Color.fakeConstructor$();
+  // Color.fakeConstructor$();
   /*external factory Color([Color color]);*/
   /*external factory Color([String color]);*/
   /*external factory Color([num color]);*/
@@ -4909,7 +4933,7 @@ external num get yellowgreen;
 @JS()
 class Euler {
   // @Ignore
-  Euler.fakeConstructor$();
+  // Euler.fakeConstructor$();
   external factory Euler([num x, num y, num z, String order]);
   external num get x;
   external set x(num v);
@@ -4943,7 +4967,7 @@ class Euler {
 @JS()
 class Frustum {
   // @Ignore
-  Frustum.fakeConstructor$();
+  // Frustum.fakeConstructor$();
   external factory Frustum(
       [Plane p0, Plane p1, Plane p2, Plane p3, Plane p4, Plane p5]);
 
@@ -4965,7 +4989,7 @@ class Frustum {
 @JS()
 class Line3 {
   // @Ignore
-  Line3.fakeConstructor$();
+  // Line3.fakeConstructor$();
   external factory Line3([Vector3 start, Vector3 end]);
   external Vector3 get start;
   external set start(Vector3 v);
@@ -5079,7 +5103,7 @@ abstract class Matrix {
 @JS()
 class Matrix3 implements Matrix {
   // @Ignore
-  Matrix3.fakeConstructor$();
+  // Matrix3.fakeConstructor$();
 
   /// Creates an identity matrix.
   external factory Matrix3();
@@ -5149,7 +5173,7 @@ class Matrix3 implements Matrix {
 @JS()
 class Matrix4 implements Matrix {
   // @Ignore
-  Matrix4.fakeConstructor$();
+  // Matrix4.fakeConstructor$();
   external factory Matrix4();
 
   /// Float32Array with matrix values.
@@ -5301,7 +5325,7 @@ class Matrix4 implements Matrix {
 @JS()
 class Plane {
   // @Ignore
-  Plane.fakeConstructor$();
+  // Plane.fakeConstructor$();
   external factory Plane([Vector3 normal, num constant]);
   external Vector3 get normal;
   external set normal(Vector3 v);
@@ -5334,7 +5358,7 @@ class Plane {
 @JS()
 class Spherical {
   // @Ignore
-  Spherical.fakeConstructor$();
+  // Spherical.fakeConstructor$();
   external factory Spherical([num radius, num phi, num theta]);
   external num get radius;
   external set radius(num v);
@@ -5352,7 +5376,7 @@ class Spherical {
 @JS()
 class Cylindrical {
   // @Ignore
-  Cylindrical.fakeConstructor$();
+  // Cylindrical.fakeConstructor$();
   external factory Cylindrical([num radius, num theta, num y]);
   external num get radius;
   external set radius(num v);
@@ -5375,7 +5399,7 @@ class Cylindrical {
 @JS()
 class Quaternion {
   // @Ignore
-  Quaternion.fakeConstructor$();
+  // Quaternion.fakeConstructor$();
   external factory Quaternion([num x, num y, num z, num w]);
   external num get x;
   external set x(num v);
@@ -5451,7 +5475,7 @@ class Quaternion {
 @JS()
 class Ray {
   // @Ignore
-  Ray.fakeConstructor$();
+  // Ray.fakeConstructor$();
   external factory Ray([Vector3 origin, Vector3 direction]);
   external Vector3 get origin;
   external set origin(Vector3 v);
@@ -5493,7 +5517,7 @@ class Ray {
 @JS()
 class Sphere {
   // @Ignore
-  Sphere.fakeConstructor$();
+  // Sphere.fakeConstructor$();
   external factory Sphere([Vector3 center, num radius]);
   external Vector3 get center;
   external set center(Vector3 v);
@@ -5531,7 +5555,7 @@ abstract class SplineControlPoint {
 @JS()
 class Triangle {
   // @Ignore
-  Triangle.fakeConstructor$();
+  // Triangle.fakeConstructor$();
   external factory Triangle([Vector3 a, Vector3 b, Vector3 c]);
   external Vector3 get a;
   external set a(Vector3 v);
@@ -5637,7 +5661,7 @@ abstract class Vector {
 @JS()
 class Vector2 implements Vector {
   // @Ignore
-  Vector2.fakeConstructor$();
+  // Vector2.fakeConstructor$();
   external factory Vector2([num x, num y]);
   external num get x;
   external set x(num v);
@@ -5813,7 +5837,7 @@ class Vector2 implements Vector {
 @JS()
 class Vector3 implements Vector {
   // @Ignore
-  Vector3.fakeConstructor$();
+  // Vector3.fakeConstructor$();
   external factory Vector3([num x, num y, num z]);
   external num get x;
   external set x(num v);
@@ -5964,7 +5988,8 @@ class Vector3 implements Vector {
 @JS()
 class Vertex extends Vector3 {
   // @Ignore
-  Vertex.fakeConstructor$() : super.fakeConstructor$();
+  // Vertex.fakeConstructor$() : super.fakeConstructor$();
+  external factory Vertex([num x, num y, num z]);
 }
 
 /// 4D vector.
@@ -5972,7 +5997,7 @@ class Vertex extends Vector3 {
 @JS()
 class Vector4 implements Vector {
   // @Ignore
-  Vector4.fakeConstructor$();
+  // Vector4.fakeConstructor$();
   external factory Vector4([num x, num y, num z, num w]);
   external num get x;
   external set x(num v);
@@ -6092,7 +6117,7 @@ class Vector4 implements Vector {
 @JS()
 abstract class Interpolant {
   // @Ignore
-  Interpolant.fakeConstructor$();
+  // Interpolant.fakeConstructor$();
   external factory Interpolant(
       dynamic parameterPositions, dynamic samplesValues, num sampleSize,
       [dynamic resultBuffer]);
@@ -6110,7 +6135,7 @@ abstract class Interpolant {
 @JS()
 class CubicInterpolant extends Interpolant {
   // @Ignore
-  CubicInterpolant.fakeConstructor$() : super.fakeConstructor$();
+  // CubicInterpolant.fakeConstructor$() : super.fakeConstructor$();
   external factory CubicInterpolant(
       dynamic parameterPositions, dynamic samplesValues, num sampleSize,
       [dynamic resultBuffer]);
@@ -6120,7 +6145,7 @@ class CubicInterpolant extends Interpolant {
 @JS()
 class DiscreteInterpolant extends Interpolant {
   // @Ignore
-  DiscreteInterpolant.fakeConstructor$() : super.fakeConstructor$();
+  // DiscreteInterpolant.fakeConstructor$() : super.fakeConstructor$();
   external factory DiscreteInterpolant(
       dynamic parameterPositions, dynamic samplesValues, num sampleSize,
       [dynamic resultBuffer]);
@@ -6130,7 +6155,7 @@ class DiscreteInterpolant extends Interpolant {
 @JS()
 class LinearInterpolant extends Interpolant {
   // @Ignore
-  LinearInterpolant.fakeConstructor$() : super.fakeConstructor$();
+  // LinearInterpolant.fakeConstructor$() : super.fakeConstructor$();
   external factory LinearInterpolant(
       dynamic parameterPositions, dynamic samplesValues, num sampleSize,
       [dynamic resultBuffer]);
@@ -6140,7 +6165,7 @@ class LinearInterpolant extends Interpolant {
 @JS()
 class QuaternionLinearInterpolant extends Interpolant {
   // @Ignore
-  QuaternionLinearInterpolant.fakeConstructor$() : super.fakeConstructor$();
+  // QuaternionLinearInterpolant.fakeConstructor$() : super.fakeConstructor$();
   external factory QuaternionLinearInterpolant(
       dynamic parameterPositions, dynamic samplesValues, num sampleSize,
       [dynamic resultBuffer]);
@@ -6151,21 +6176,21 @@ class QuaternionLinearInterpolant extends Interpolant {
 @JS()
 class Bone extends Object3D {
   // @Ignore
-  Bone.fakeConstructor$() : super.fakeConstructor$();
+  // Bone.fakeConstructor$() : super.fakeConstructor$();
   external factory Bone();
 }
 
 @JS()
 class Group extends Object3D {
   // @Ignore
-  Group.fakeConstructor$() : super.fakeConstructor$();
+  // Group.fakeConstructor$() : super.fakeConstructor$();
   external factory Group();
 }
 
 @JS()
 class LOD extends Object3D {
   // @Ignore
-  LOD.fakeConstructor$() : super.fakeConstructor$();
+  // LOD.fakeConstructor$() : super.fakeConstructor$();
   external factory LOD();
   external List<dynamic> get levels;
   external set levels(List<dynamic> v);
@@ -6222,7 +6247,7 @@ abstract class LensFlareProperty {
 @JS()
 class LensFlare extends Object3D {
   // @Ignore
-  LensFlare.fakeConstructor$() : super.fakeConstructor$();
+  // LensFlare.fakeConstructor$() : super.fakeConstructor$();
   external factory LensFlare(
       [Texture texture,
       num size,
@@ -6239,17 +6264,17 @@ class LensFlare extends Object3D {
   /*external void add(Texture texture, [num size, num distance, enum Blending blending, Color color]);*/
   external void add(
       [Object3D object1,
-        Object3D object2,
-        Object3D object3,
-        Object3D object4,
-        Object3D object5]);
+      Object3D object2,
+      Object3D object3,
+      Object3D object4,
+      Object3D object5]);
   external void updateLensFlares();
 }
 
 @JS()
 class Line extends Object3D {
   // @Ignore
-  Line.fakeConstructor$() : super.fakeConstructor$();
+  // Line.fakeConstructor$() : super.fakeConstructor$();
   external factory Line(
       [dynamic /*Geometry|BufferGeometry*/ geometry,
       dynamic /*LineDashedMaterial|LineBasicMaterial|ShaderMaterial*/ material,
@@ -6270,7 +6295,7 @@ external num get LinePieces;
 @JS()
 class LineSegments extends Line {
   // @Ignore
-  LineSegments.fakeConstructor$() : super.fakeConstructor$();
+  // LineSegments.fakeConstructor$() : super.fakeConstructor$();
   external factory LineSegments(
       [dynamic /*Geometry|BufferGeometry*/ geometry,
       dynamic /*LineDashedMaterial|LineBasicMaterial|ShaderMaterial|List<LineDashedMaterial|LineBasicMaterial|ShaderMaterial>*/ material,
@@ -6280,7 +6305,7 @@ class LineSegments extends Line {
 @JS()
 class Mesh extends Object3D {
   // @Ignore
-  Mesh.fakeConstructor$() : super.fakeConstructor$();
+  // Mesh.fakeConstructor$() : super.fakeConstructor$();
   external factory Mesh(
       [dynamic /*Geometry|BufferGeometry*/ geometry,
       dynamic /*Material|List<Material>*/ material]);
@@ -6307,7 +6332,7 @@ class Mesh extends Object3D {
 @JS()
 class Points extends Object3D {
   // @Ignore
-  Points.fakeConstructor$() : super.fakeConstructor$();
+  // Points.fakeConstructor$() : super.fakeConstructor$();
   external factory Points(
       [dynamic /*Geometry|BufferGeometry*/ geometry, Material material]);
 
@@ -6325,20 +6350,24 @@ class Points extends Object3D {
 @JS()
 class PointCloud extends Points {
   // @Ignore
-  PointCloud.fakeConstructor$() : super.fakeConstructor$();
+  // PointCloud.fakeConstructor$() : super.fakeConstructor$();
+  external factory PointCloud(
+      [dynamic /*Geometry|BufferGeometry*/ geometry, Material material]);
 }
 
 /// Use [Points THREE.Points] instead.
 @JS()
 class ParticleSystem extends Points {
   // @Ignore
-  ParticleSystem.fakeConstructor$() : super.fakeConstructor$();
+  // ParticleSystem.fakeConstructor$() : super.fakeConstructor$();
+  external factory ParticleSystem(
+      [dynamic /*Geometry|BufferGeometry*/ geometry, Material material]);
 }
 
 @JS()
 class Skeleton {
   // @Ignore
-  Skeleton.fakeConstructor$();
+  // Skeleton.fakeConstructor$();
   external factory Skeleton(List<Bone> bones, [List<Matrix4> boneInverses]);
 
   /// This property has been removed completely.
@@ -6367,7 +6396,7 @@ class Skeleton {
 @JS()
 class SkinnedMesh extends Mesh {
   // @Ignore
-  SkinnedMesh.fakeConstructor$() : super.fakeConstructor$();
+  // SkinnedMesh.fakeConstructor$() : super.fakeConstructor$();
   /*external factory SkinnedMesh([Geometry|BufferGeometry geometry, MeshBasicMaterial material, bool useVertexTexture]);*/
   /*external factory SkinnedMesh([Geometry|BufferGeometry geometry, MeshDepthMaterial material, bool useVertexTexture]);*/
   /*external factory SkinnedMesh([Geometry|BufferGeometry geometry, MultiMaterial material, bool useVertexTexture]);*/
@@ -6396,7 +6425,7 @@ class SkinnedMesh extends Mesh {
 @JS()
 class Sprite extends Object3D {
   // @Ignore
-  Sprite.fakeConstructor$() : super.fakeConstructor$();
+  // Sprite.fakeConstructor$() : super.fakeConstructor$();
   external factory Sprite([Material material]);
   external BufferGeometry get geometry;
   external set geometry(BufferGeometry v);
@@ -6409,7 +6438,8 @@ class Sprite extends Object3D {
 @JS()
 class Particle extends Sprite {
   // @Ignore
-  Particle.fakeConstructor$() : super.fakeConstructor$();
+  // Particle.fakeConstructor$() : super.fakeConstructor$();
+  external factory Particle([Material material]);
 }
 
 /// Renderers //////////////////////////////////////////////////////////////////////////////////
@@ -6486,7 +6516,7 @@ abstract class WebGLRendererParameters {
 @JS()
 class WebGLRenderer implements Renderer {
   // @Ignore
-  WebGLRenderer.fakeConstructor$();
+  // WebGLRenderer.fakeConstructor$();
 
   /// parameters is an optional object with properties defining the renderer's behaviour. The constructor also accepts no parameters at all. In all cases, it will assume sane defaults when parameters are missing.
   external factory WebGLRenderer([WebGLRendererParameters parameters]);
@@ -6725,7 +6755,7 @@ abstract class RenderItem {
 @JS()
 class WebGLRenderList {
   // @Ignore
-  WebGLRenderList.fakeConstructor$();
+  // WebGLRenderList.fakeConstructor$();
   external List<RenderItem> get opaque;
   external set opaque(List<RenderItem> v);
   external List<dynamic> get transparent;
@@ -6743,7 +6773,7 @@ class WebGLRenderList {
 @JS()
 class WebGLRenderLists {
   // @Ignore
-  WebGLRenderLists.fakeConstructor$();
+  // WebGLRenderLists.fakeConstructor$();
   external void dispose();
 
   /// returns {<String> : <WebGLRenderList>}
@@ -6786,7 +6816,7 @@ abstract class WebGLRenderTargetOptions {
 @JS()
 class WebGLRenderTarget extends EventDispatcher {
   // @Ignore
-  WebGLRenderTarget.fakeConstructor$() : super.fakeConstructor$();
+  // WebGLRenderTarget.fakeConstructor$() : super.fakeConstructor$();
   external factory WebGLRenderTarget(num width, num height,
       [WebGLRenderTargetOptions options]);
   external String get uuid;
@@ -6858,7 +6888,7 @@ class WebGLRenderTarget extends EventDispatcher {
 @JS()
 class WebGLRenderTargetCube extends WebGLRenderTarget {
   // @Ignore
-  WebGLRenderTargetCube.fakeConstructor$() : super.fakeConstructor$();
+  // WebGLRenderTargetCube.fakeConstructor$() : super.fakeConstructor$();
   external factory WebGLRenderTargetCube(num width, num height,
       [WebGLRenderTargetOptions options]);
   external num get activeCubeFace;
@@ -6987,7 +7017,8 @@ external dynamic
     get ShaderChunk;
 @JS()
 external set ShaderChunk(
-    dynamic /*{
+    dynamic
+        /*{
     [name: string]: string;
 
     alphamap_fragment: string;
@@ -7101,7 +7132,7 @@ external set ShaderChunk(
     uv_vertex: string;
     worldpos_vertex: string;
 }*/
-    v);
+        v);
 
 @anonymous
 @JS()
@@ -7139,7 +7170,8 @@ external dynamic
     get ShaderLib;
 @JS()
 external set ShaderLib(
-    dynamic /*{
+    dynamic
+        /*{
     [name: string]: Shader;
     basic: Shader;
     lambert: Shader;
@@ -7155,7 +7187,7 @@ external set ShaderLib(
     distanceRGBA: Shader;
     physical: Shader;
 }*/
-    v);
+        v);
 
 @anonymous
 @JS()
@@ -7302,7 +7334,8 @@ external dynamic
     get UniformsLib;
 @JS()
 external set UniformsLib(
-    dynamic /*{
+    dynamic
+        /*{
     common: {
         diffuse: IUniform;
         opacity: IUniform;
@@ -7434,7 +7467,7 @@ external set UniformsLib(
         uvTransform: IUniform;
     };
 }*/
-    v);
+        v);
 // Module UniformsUtils
 @JS("UniformsUtils.merge")
 external dynamic UniformsUtils_merge(List<dynamic> uniforms);
@@ -7445,7 +7478,7 @@ external dynamic clone(dynamic uniforms_src);
 @JS()
 class Uniform {
   // @Ignore
-  Uniform.fakeConstructor$();
+  // Uniform.fakeConstructor$();
   /*external factory Uniform(dynamic value);*/
   /*external factory Uniform(String type, dynamic value);*/
   external factory Uniform(dynamic /*dynamic|String*/ value_type,
@@ -7469,7 +7502,7 @@ class Uniform {
 @JS()
 class WebGLBufferRenderer {
   // @Ignore
-  WebGLBufferRenderer.fakeConstructor$();
+  // WebGLBufferRenderer.fakeConstructor$();
   external factory WebGLBufferRenderer(
       RenderingContext JS$_gl, dynamic extensions, dynamic JS$_infoRender);
   external void setMode(dynamic value);
@@ -7480,7 +7513,7 @@ class WebGLBufferRenderer {
 @JS()
 class WebGLClipping {
   // @Ignore
-  WebGLClipping.fakeConstructor$();
+  // WebGLClipping.fakeConstructor$();
   external dynamic /*{ value: any, needsUpdate: boolean }*/ get uniform;
   external set uniform(dynamic /*{ value: any, needsUpdate: boolean }*/ v);
   external num get numPlanes;
@@ -7507,7 +7540,7 @@ abstract class WebGLCapabilitiesParameters {
 @JS()
 class WebGLCapabilities {
   // @Ignore
-  WebGLCapabilities.fakeConstructor$();
+  // WebGLCapabilities.fakeConstructor$();
   external factory WebGLCapabilities(RenderingContext gl, dynamic extensions,
       WebGLCapabilitiesParameters parameters);
   external dynamic get precision;
@@ -7543,7 +7576,7 @@ class WebGLCapabilities {
 @JS()
 class WebGLExtensions {
   // @Ignore
-  WebGLExtensions.fakeConstructor$();
+  // WebGLExtensions.fakeConstructor$();
   external factory WebGLExtensions(RenderingContext gl);
   external dynamic JS$get(String name);
 }
@@ -7551,7 +7584,7 @@ class WebGLExtensions {
 @JS()
 class WebGLGeometries {
   // @Ignore
-  WebGLGeometries.fakeConstructor$();
+  // WebGLGeometries.fakeConstructor$();
   external factory WebGLGeometries(
       RenderingContext gl, dynamic extensions, dynamic JS$_infoRender);
   external dynamic JS$get(dynamic object);
@@ -7560,7 +7593,7 @@ class WebGLGeometries {
 @JS()
 class WebGLLights {
   // @Ignore
-  WebGLLights.fakeConstructor$();
+  // WebGLLights.fakeConstructor$();
   external factory WebGLLights(
       RenderingContext gl, dynamic properties, dynamic info);
   external dynamic JS$get(dynamic light);
@@ -7570,7 +7603,7 @@ class WebGLLights {
 @JS()
 class WebGLInfo {
   // @Ignore
-  WebGLInfo.fakeConstructor$();
+  // WebGLInfo.fakeConstructor$();
   external bool get autoReset;
   external set autoReset(bool v);
   external dynamic
@@ -7580,11 +7613,12 @@ class WebGLInfo {
     }*/
       get memory;
   external set memory(
-      dynamic /*{ 
+      dynamic
+          /*{ 
         geometries: number;
         textures: number;
     }*/
-      v);
+          v);
   external List<WebGLProgram> /*List<WebGLProgram>|Null*/ get programs;
   external set programs(List<WebGLProgram> /*List<WebGLProgram>|Null*/ v);
   external dynamic
@@ -7597,21 +7631,22 @@ class WebGLInfo {
     }*/
       get render;
   external set render(
-      dynamic /*{
+      dynamic
+          /*{
         calls: number;
         frame: number;
         lines: number;
         points: number;
         triangles: number;
     }*/
-      v);
+          v);
   external void reset();
 }
 
 @JS()
 class WebGLIndexedBufferRenderer {
   // @Ignore
-  WebGLIndexedBufferRenderer.fakeConstructor$();
+  // WebGLIndexedBufferRenderer.fakeConstructor$();
   external factory WebGLIndexedBufferRenderer(
       RenderingContext gl, dynamic properties, dynamic info);
   external void setMode(dynamic value);
@@ -7623,7 +7658,7 @@ class WebGLIndexedBufferRenderer {
 @JS()
 class WebGLObjects {
   // @Ignore
-  WebGLObjects.fakeConstructor$();
+  // WebGLObjects.fakeConstructor$();
   external factory WebGLObjects(
       RenderingContext gl, dynamic properties, dynamic info);
   external dynamic getAttributeBuffer(dynamic attribute);
@@ -7634,7 +7669,7 @@ class WebGLObjects {
 @JS()
 class WebGLProgram {
   // @Ignore
-  WebGLProgram.fakeConstructor$();
+  // WebGLProgram.fakeConstructor$();
   external factory WebGLProgram(WebGLRenderer renderer, String code,
       ShaderMaterial material, WebGLRendererParameters parameters);
   external num get id;
@@ -7665,7 +7700,7 @@ class WebGLProgram {
 @JS()
 class WebGLPrograms {
   // @Ignore
-  WebGLPrograms.fakeConstructor$();
+  // WebGLPrograms.fakeConstructor$();
   external factory WebGLPrograms(WebGLRenderer renderer, dynamic capabilities);
   external List<WebGLProgram> get programs;
   external set programs(List<WebGLProgram> v);
@@ -7680,7 +7715,7 @@ class WebGLPrograms {
 @JS()
 class WebGLTextures {
   // @Ignore
-  WebGLTextures.fakeConstructor$();
+  // WebGLTextures.fakeConstructor$();
   external factory WebGLTextures(
       dynamic gl,
       dynamic extensions,
@@ -7699,7 +7734,7 @@ class WebGLTextures {
 @JS()
 class WebGLUniforms {
   // @Ignore
-  WebGLUniforms.fakeConstructor$();
+  // WebGLUniforms.fakeConstructor$();
   external factory WebGLUniforms(
       dynamic gl, WebGLProgram program, WebGLRenderer renderer);
   external WebGLRenderer get renderer;
@@ -7718,7 +7753,7 @@ class WebGLUniforms {
 @JS()
 class WebGLProperties {
   // @Ignore
-  WebGLProperties.fakeConstructor$();
+  // WebGLProperties.fakeConstructor$();
   external factory WebGLProperties();
   external dynamic JS$get(dynamic object);
   external void delete(dynamic object);
@@ -7728,14 +7763,14 @@ class WebGLProperties {
 @JS()
 class WebGLShader {
   // @Ignore
-  WebGLShader.fakeConstructor$();
+  // WebGLShader.fakeConstructor$();
   external factory WebGLShader(dynamic gl, String type, String string);
 }
 
 @JS()
 class WebGLShadowMap {
   // @Ignore
-  WebGLShadowMap.fakeConstructor$();
+  // WebGLShadowMap.fakeConstructor$();
   external factory WebGLShadowMap(
       Renderer JS$_renderer,
       List<dynamic> JS$_lights,
@@ -7759,7 +7794,7 @@ class WebGLShadowMap {
 @JS()
 class WebGLState {
   // @Ignore
-  WebGLState.fakeConstructor$();
+  // WebGLState.fakeConstructor$();
   external factory WebGLState(
       dynamic gl, dynamic extensions, Function paramThreeToGL);
   external dynamic
@@ -7770,12 +7805,13 @@ class WebGLState {
     }*/
       get buffers;
   external set buffers(
-      dynamic /*{
+      dynamic
+          /*{
         color: WebGLColorBuffer,
         depth: WebGLDepthBuffer,
         stencil: WebGLStencilBuffer,
     }*/
-      v);
+          v);
   external void init();
   external void initAttributes();
   external void enableAttribute(String attribute);
@@ -7828,7 +7864,7 @@ class WebGLState {
 @JS()
 class WebGLColorBuffer {
   // @Ignore
-  WebGLColorBuffer.fakeConstructor$();
+  // WebGLColorBuffer.fakeConstructor$();
   external factory WebGLColorBuffer(dynamic gl, dynamic state);
   external void setMask(num colorMask);
   external void setLocked(bool lock);
@@ -7839,7 +7875,7 @@ class WebGLColorBuffer {
 @JS()
 class WebGLDepthBuffer {
   // @Ignore
-  WebGLDepthBuffer.fakeConstructor$();
+  // WebGLDepthBuffer.fakeConstructor$();
   external factory WebGLDepthBuffer(dynamic gl, dynamic state);
   external void setTest(bool depthTest);
   external void setMask(num depthMask);
@@ -7852,7 +7888,7 @@ class WebGLDepthBuffer {
 @JS()
 class WebGLStencilBuffer {
   // @Ignore
-  WebGLStencilBuffer.fakeConstructor$();
+  // WebGLStencilBuffer.fakeConstructor$();
   external factory WebGLStencilBuffer(dynamic gl, dynamic state);
   external void setTest(bool stencilTest);
   external void setMask(num stencilMask);
@@ -7868,7 +7904,7 @@ class WebGLStencilBuffer {
 @JS()
 class LensFlarePlugin {
   // @Ignore
-  LensFlarePlugin.fakeConstructor$();
+  // LensFlarePlugin.fakeConstructor$();
   external factory LensFlarePlugin(
       WebGLRenderer renderer, List<dynamic> flares);
   external void render(
@@ -7878,7 +7914,7 @@ class LensFlarePlugin {
 @JS()
 class SpritePlugin {
   // @Ignore
-  SpritePlugin.fakeConstructor$();
+  // SpritePlugin.fakeConstructor$();
   external factory SpritePlugin(WebGLRenderer renderer, List<dynamic> sprites);
   external void render(
       Scene scene, Camera camera, num viewportWidth, num viewportHeight);
@@ -7890,7 +7926,7 @@ class SpritePlugin {
 @JS()
 class Scene extends Object3D {
   // @Ignore
-  Scene.fakeConstructor$() : super.fakeConstructor$();
+  // Scene.fakeConstructor$() : super.fakeConstructor$();
   external factory Scene();
 
   /// A fog instance defining the type of fog that affects everything rendered in the scene. Default is null.
@@ -7922,7 +7958,7 @@ abstract class IFog {
 @JS()
 class Fog implements IFog {
   // @Ignore
-  Fog.fakeConstructor$();
+  // Fog.fakeConstructor$();
   external factory Fog(num hex, [num near, num far]);
   external String get name;
   external set name(String v);
@@ -7947,7 +7983,7 @@ class Fog implements IFog {
 @JS()
 class FogExp2 implements IFog {
   // @Ignore
-  FogExp2.fakeConstructor$();
+  // FogExp2.fakeConstructor$();
   external factory FogExp2(dynamic /*num|String*/ hex, [num density]);
   external String get name;
   external set name(String v);
@@ -7971,7 +8007,7 @@ external set TextureIdCount(num v);
 @JS()
 class Texture extends EventDispatcher {
   // @Ignore
-  Texture.fakeConstructor$() : super.fakeConstructor$();
+  // Texture.fakeConstructor$() : super.fakeConstructor$();
   external factory Texture(
       [dynamic /*ImageElement|CanvasElement|VideoElement*/ image,
       num /*enum Mapping*/ mapping,
@@ -8049,7 +8085,7 @@ class Texture extends EventDispatcher {
 @JS()
 class DepthTexture extends Texture {
   // @Ignore
-  DepthTexture.fakeConstructor$() : super.fakeConstructor$();
+  // DepthTexture.fakeConstructor$() : super.fakeConstructor$();
   external factory DepthTexture(num width, num heighht,
       [num /*enum TextureDataType*/ type,
       num /*enum Mapping*/ mapping,
@@ -8065,7 +8101,7 @@ class DepthTexture extends Texture {
 @JS()
 class CanvasTexture extends Texture {
   // @Ignore
-  CanvasTexture.fakeConstructor$() : super.fakeConstructor$();
+  // CanvasTexture.fakeConstructor$() : super.fakeConstructor$();
   external factory CanvasTexture(
       dynamic /*ImageElement|CanvasElement|VideoElement*/ canvas,
       [num /*enum Mapping*/ mapping,
@@ -8081,7 +8117,7 @@ class CanvasTexture extends Texture {
 @JS()
 class CubeTexture extends Texture {
   // @Ignore
-  CubeTexture.fakeConstructor$() : super.fakeConstructor$();
+  // CubeTexture.fakeConstructor$() : super.fakeConstructor$();
   external factory CubeTexture(
       [List<dynamic> images,
       num /*enum Mapping*/ mapping,
@@ -8100,7 +8136,7 @@ class CubeTexture extends Texture {
 @JS()
 class CompressedTexture extends Texture {
   // @Ignore
-  CompressedTexture.fakeConstructor$() : super.fakeConstructor$();
+  // CompressedTexture.fakeConstructor$() : super.fakeConstructor$();
   external factory CompressedTexture(
       List<ImageData> mipmaps, num width, num height,
       [num /*enum PixelFormat*/ format,
@@ -8119,7 +8155,7 @@ class CompressedTexture extends Texture {
 @JS()
 class DataTexture extends Texture {
   // @Ignore
-  DataTexture.fakeConstructor$() : super.fakeConstructor$();
+  // DataTexture.fakeConstructor$() : super.fakeConstructor$();
   external factory DataTexture(
       dynamic /*ByteBuffer|Int8List|Uint8List|Uint8ClampedList|Int16List|Uint16List|Int32List|Uint32List|Float32List|Float64List*/ data,
       num width,
@@ -8140,7 +8176,7 @@ class DataTexture extends Texture {
 @JS()
 class VideoTexture extends Texture {
   // @Ignore
-  VideoTexture.fakeConstructor$() : super.fakeConstructor$();
+  // VideoTexture.fakeConstructor$() : super.fakeConstructor$();
   external factory VideoTexture(VideoElement video,
       [num /*enum Mapping*/ mapping,
       num /*enum Wrapping*/ wrapS,
@@ -8202,7 +8238,7 @@ external bool isClockWise(List<num> pts);
 @JS()
 class Audio extends Object3D {
   // @Ignore
-  Audio.fakeConstructor$() : super.fakeConstructor$();
+  // Audio.fakeConstructor$() : super.fakeConstructor$();
   external factory Audio(AudioListener listener);
   external String get type;
   external set type(String v);
@@ -8254,7 +8290,7 @@ class Audio extends Object3D {
 @JS()
 class AudioAnalyser {
   // @Ignore
-  AudioAnalyser.fakeConstructor$();
+  // AudioAnalyser.fakeConstructor$();
   external factory AudioAnalyser(dynamic audio, num fftSize);
   external dynamic get analyser;
   external set analyser(dynamic v);
@@ -8273,7 +8309,7 @@ external AudioContext get audioContext;
 @JS()
 class AudioBuffer {
   // @Ignore
-  AudioBuffer.fakeConstructor$();
+  // AudioBuffer.fakeConstructor$();
   external factory AudioBuffer(dynamic context);
   external dynamic get context;
   external set context(dynamic v);
@@ -8288,7 +8324,7 @@ class AudioBuffer {
 @JS()
 class PositionalAudio extends Audio {
   // @Ignore
-  PositionalAudio.fakeConstructor$() : super.fakeConstructor$();
+  // PositionalAudio.fakeConstructor$() : super.fakeConstructor$();
   external factory PositionalAudio(AudioListener listener);
   external PannerNode get panner;
   external set panner(PannerNode v);
@@ -8305,7 +8341,7 @@ class PositionalAudio extends Audio {
 @JS()
 class AudioListener extends Object3D {
   // @Ignore
-  AudioListener.fakeConstructor$() : super.fakeConstructor$();
+  // AudioListener.fakeConstructor$() : super.fakeConstructor$();
   external factory AudioListener();
   external String get type;
   external set type(String v);
@@ -8328,7 +8364,7 @@ class AudioListener extends Object3D {
 @JS()
 class Curve<T extends Vector> {
   // @Ignore
-  Curve.fakeConstructor$();
+  // Curve.fakeConstructor$();
 
   /// This value determines the amount of divisions when calculating the cumulative segment lengths of a curve via .getLengths.
   /// To ensure precision when using methods like .getSpacedPoints, it is recommended to increase .arcLengthDivisions if the curve is very large.
@@ -8380,7 +8416,7 @@ class Curve<T extends Vector> {
 @JS()
 class CurvePath<T extends Vector> extends Curve<T> {
   // @Ignore
-  CurvePath.fakeConstructor$() : super.fakeConstructor$();
+  // CurvePath.fakeConstructor$() : super.fakeConstructor$();
   external factory CurvePath();
   external List<Curve<T>> get curves;
   external set curves(List<Curve<T>> v);
@@ -8431,7 +8467,7 @@ abstract class PathAction {
 @JS()
 class Path extends CurvePath<Vector2> {
   // @Ignore
-  Path.fakeConstructor$() : super.fakeConstructor$();
+  // Path.fakeConstructor$() : super.fakeConstructor$();
   external factory Path([List<Vector2> points]);
   external Vector2 get currentPoint;
   external set currentPoint(Vector2 v);
@@ -8458,7 +8494,7 @@ class Path extends CurvePath<Vector2> {
 @JS()
 class ShapePath {
   // @Ignore
-  ShapePath.fakeConstructor$();
+  // ShapePath.fakeConstructor$();
   external factory ShapePath();
   external List<dynamic> get subPaths;
   external set subPaths(List<dynamic> v);
@@ -8477,7 +8513,7 @@ class ShapePath {
 @JS()
 class Shape extends Path {
   // @Ignore
-  Shape.fakeConstructor$() : super.fakeConstructor$();
+  // Shape.fakeConstructor$() : super.fakeConstructor$();
   external factory Shape([List<Vector2> points]);
   external List<Path> get holes;
   external set holes(List<Path> v);
@@ -8515,7 +8551,7 @@ external num interpolate(num p0, num p1, num p2, num p3, num t);
 @JS()
 class CatmullRomCurve3 extends Curve<Vector3> {
   // @Ignore
-  CatmullRomCurve3.fakeConstructor$() : super.fakeConstructor$();
+  // CatmullRomCurve3.fakeConstructor$() : super.fakeConstructor$();
   external factory CatmullRomCurve3(
       [List<Vector3> points, bool closed, String curveType, num tension]);
   external List<Vector3> get points;
@@ -8526,7 +8562,7 @@ class CatmullRomCurve3 extends Curve<Vector3> {
 @JS()
 class CubicBezierCurve extends Curve<Vector2> {
   // @Ignore
-  CubicBezierCurve.fakeConstructor$() : super.fakeConstructor$();
+  // CubicBezierCurve.fakeConstructor$() : super.fakeConstructor$();
   external factory CubicBezierCurve(
       Vector2 v0, Vector2 v1, Vector2 v2, Vector2 v3);
   external Vector2 get v0;
@@ -8542,7 +8578,7 @@ class CubicBezierCurve extends Curve<Vector2> {
 @JS()
 class CubicBezierCurve3 extends Curve<Vector3> {
   // @Ignore
-  CubicBezierCurve3.fakeConstructor$() : super.fakeConstructor$();
+  // CubicBezierCurve3.fakeConstructor$() : super.fakeConstructor$();
   external factory CubicBezierCurve3(
       Vector3 v0, Vector3 v1, Vector3 v2, Vector3 v3);
   external Vector3 get v0;
@@ -8559,7 +8595,7 @@ class CubicBezierCurve3 extends Curve<Vector3> {
 @JS()
 class EllipseCurve extends Curve<Vector2> {
   // @Ignore
-  EllipseCurve.fakeConstructor$() : super.fakeConstructor$();
+  // EllipseCurve.fakeConstructor$() : super.fakeConstructor$();
   external factory EllipseCurve(num aX, num aY, num xRadius, num yRadius,
       num aStartAngle, num aEndAngle, bool aClockwise, num aRotation);
   external num get aX;
@@ -8583,7 +8619,7 @@ class EllipseCurve extends Curve<Vector2> {
 @JS()
 class ArcCurve extends EllipseCurve {
   // @Ignore
-  ArcCurve.fakeConstructor$() : super.fakeConstructor$();
+  // ArcCurve.fakeConstructor$() : super.fakeConstructor$();
   external factory ArcCurve(num aX, num aY, num aRadius, num aStartAngle,
       num aEndAngle, bool aClockwise);
 }
@@ -8591,7 +8627,7 @@ class ArcCurve extends EllipseCurve {
 @JS()
 class LineCurve extends Curve<Vector2> {
   // @Ignore
-  LineCurve.fakeConstructor$() : super.fakeConstructor$();
+  // LineCurve.fakeConstructor$() : super.fakeConstructor$();
   external factory LineCurve(Vector2 v1, Vector2 v2);
   external Vector2 get v1;
   external set v1(Vector2 v);
@@ -8602,7 +8638,7 @@ class LineCurve extends Curve<Vector2> {
 @JS()
 class LineCurve3 extends Curve<Vector3> {
   // @Ignore
-  LineCurve3.fakeConstructor$() : super.fakeConstructor$();
+  // LineCurve3.fakeConstructor$() : super.fakeConstructor$();
   external factory LineCurve3(Vector3 v1, Vector3 v2);
   external Vector3 get v1;
   external set v1(Vector3 v);
@@ -8614,7 +8650,7 @@ class LineCurve3 extends Curve<Vector3> {
 @JS()
 class QuadraticBezierCurve extends Curve<Vector2> {
   // @Ignore
-  QuadraticBezierCurve.fakeConstructor$() : super.fakeConstructor$();
+  // QuadraticBezierCurve.fakeConstructor$() : super.fakeConstructor$();
   external factory QuadraticBezierCurve(Vector2 v0, Vector2 v1, Vector2 v2);
   external Vector2 get v0;
   external set v0(Vector2 v);
@@ -8627,7 +8663,7 @@ class QuadraticBezierCurve extends Curve<Vector2> {
 @JS()
 class QuadraticBezierCurve3 extends Curve<Vector3> {
   // @Ignore
-  QuadraticBezierCurve3.fakeConstructor$() : super.fakeConstructor$();
+  // QuadraticBezierCurve3.fakeConstructor$() : super.fakeConstructor$();
   external factory QuadraticBezierCurve3(Vector3 v0, Vector3 v1, Vector3 v2);
   external Vector3 get v0;
   external set v0(Vector3 v);
@@ -8641,7 +8677,7 @@ class QuadraticBezierCurve3 extends Curve<Vector3> {
 @JS()
 class SplineCurve extends Curve<Vector2> {
   // @Ignore
-  SplineCurve.fakeConstructor$() : super.fakeConstructor$();
+  // SplineCurve.fakeConstructor$() : super.fakeConstructor$();
   external factory SplineCurve([List<Vector2> points]);
   external List<Vector2> get points;
   external set points(List<Vector2> v);
@@ -8651,7 +8687,7 @@ class SplineCurve extends Curve<Vector2> {
 @JS()
 class BoxBufferGeometry extends BufferGeometry {
   // @Ignore
-  BoxBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // BoxBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory BoxBufferGeometry(num width, num height, num depth,
       [num widthSegments, num heightSegments, num depthSegments]);
   external dynamic
@@ -8665,7 +8701,8 @@ class BoxBufferGeometry extends BufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         width: number;
         height: number;
         depth: number;
@@ -8673,14 +8710,14 @@ class BoxBufferGeometry extends BufferGeometry {
         heightSegments: number;
         depthSegments: number;
     }*/
-      v);
+          v);
 }
 
 /// BoxGeometry is the quadrilateral primitive geometry class. It is typically used for creating a cube or irregular quadrilateral of the dimensions provided within the (optional) 'width', 'height', & 'depth' constructor arguments.
 @JS()
 class BoxGeometry extends Geometry {
   // @Ignore
-  BoxGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // BoxGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory BoxGeometry(num width, num height, num depth,
       [num widthSegments, num heightSegments, num depthSegments]);
   external dynamic
@@ -8694,7 +8731,8 @@ class BoxGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         width: number;
         height: number;
         depth: number;
@@ -8702,20 +8740,22 @@ class BoxGeometry extends Geometry {
         heightSegments: number;
         depthSegments: number;
     }*/
-      v);
+          v);
 }
 
 /// Use [BoxGeometry] instead.
 @JS()
 class CubeGeometry extends BoxGeometry {
   // @Ignore
-  CubeGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // CubeGeometry.fakeConstructor$() : super.fakeConstructor$();
+  external factory CubeGeometry(num width, num height, num depth,
+      [num widthSegments, num heightSegments, num depthSegments]);
 }
 
 @JS()
 class CircleBufferGeometry extends BufferGeometry {
   // @Ignore
-  CircleBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // CircleBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory CircleBufferGeometry(
       [num radius, num segments, num thetaStart, num thetaLength]);
   external dynamic
@@ -8727,19 +8767,20 @@ class CircleBufferGeometry extends BufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radius: number;
         segments: number;
         thetaStart: number;
         thetaLength: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class CircleGeometry extends Geometry {
   // @Ignore
-  CircleGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // CircleGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory CircleGeometry(
       [num radius, num segments, num thetaStart, num thetaLength]);
   external dynamic
@@ -8751,19 +8792,20 @@ class CircleGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radius: number;
         segments: number;
         thetaStart: number;
         thetaLength: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class CylinderBufferGeometry extends BufferGeometry {
   // @Ignore
-  CylinderBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // CylinderBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory CylinderBufferGeometry(
       [num radiusTop,
       num radiusBottom,
@@ -8786,7 +8828,8 @@ class CylinderBufferGeometry extends BufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radiusTop: number;
         radiusBottom: number;
         height: number;
@@ -8796,13 +8839,13 @@ class CylinderBufferGeometry extends BufferGeometry {
         thetaStart: number;
         thetaLength: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class CylinderGeometry extends Geometry {
   // @Ignore
-  CylinderGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // CylinderGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory CylinderGeometry(
       [num radiusTop,
       num radiusBottom,
@@ -8825,7 +8868,8 @@ class CylinderGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radiusTop: number;
         radiusBottom: number;
         height: number;
@@ -8835,13 +8879,13 @@ class CylinderGeometry extends Geometry {
         thetaStart: number;
         thetaLength: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class ConeBufferGeometry extends BufferGeometry {
   // @Ignore
-  ConeBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // ConeBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory ConeBufferGeometry(
       [num radius,
       num height,
@@ -8855,7 +8899,7 @@ class ConeBufferGeometry extends BufferGeometry {
 @JS()
 class ConeGeometry extends CylinderGeometry {
   // @Ignore
-  ConeGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // ConeGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory ConeGeometry(
       [num radius,
       num height,
@@ -8869,32 +8913,34 @@ class ConeGeometry extends CylinderGeometry {
 @JS()
 class DodecahedronBufferGeometry extends PolyhedronBufferGeometry {
   // @Ignore
-  DodecahedronBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // DodecahedronBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory DodecahedronBufferGeometry([num radius, num detail]);
 }
 
 @JS()
 class DodecahedronGeometry extends Geometry {
   // @Ignore
-  DodecahedronGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // DodecahedronGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory DodecahedronGeometry([num radius, num detail]);
-  external dynamic /*{
+  external dynamic
+      /*{
         radius: number;
         detail: number;
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radius: number;
         detail: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class EdgesGeometry extends BufferGeometry {
   // @Ignore
-  EdgesGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // EdgesGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory EdgesGeometry(
       dynamic /*BufferGeometry|Geometry*/ geometry, num thresholdAngle);
 }
@@ -8902,7 +8948,7 @@ class EdgesGeometry extends BufferGeometry {
 @JS()
 class ExtrudeGeometry extends Geometry {
   // @Ignore
-  ExtrudeGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // ExtrudeGeometry.fakeConstructor$() : super.fakeConstructor$();
   /*external factory ExtrudeGeometry([Shape shape, dynamic options]);*/
   /*external factory ExtrudeGeometry([List<Shape> shapes, dynamic options]);*/
   external factory ExtrudeGeometry(
@@ -8914,11 +8960,12 @@ class ExtrudeGeometry extends Geometry {
     }*/
       get WorldUVGenerator;
   external static set WorldUVGenerator(
-      dynamic /*{
+      dynamic
+          /*{
         generateTopUV(geometry: Geometry, vertex: number[], indexA: number, indexB: number, indexC: number): Vector2[];
         generateSideWallUV(geometry: Geometry, vertex: number[], indexA: number, indexB: number, indexC: number, indexD: number): Vector2[];
     }*/
-      v);
+          v);
   external void addShapeList(List<Shape> shapes, [dynamic options]);
   external void addShape(Shape shape, [dynamic options]);
 }
@@ -8926,7 +8973,7 @@ class ExtrudeGeometry extends Geometry {
 @JS()
 class ExtrudeBufferGeometry extends BufferGeometry {
   // @Ignore
-  ExtrudeBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // ExtrudeBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory ExtrudeBufferGeometry([List<Shape> shapes, dynamic options]);
   external static dynamic
       /*{
@@ -8935,11 +8982,12 @@ class ExtrudeBufferGeometry extends BufferGeometry {
     }*/
       get WorldUVGenerator;
   external static set WorldUVGenerator(
-      dynamic /*{
+      dynamic
+          /*{
         generateTopUV(geometry: Geometry, vertices: number[], indexA: number, indexB: number, indexC: number): Vector2[];
         generateSideWallUV(geometry: Geometry, vertices: number[], indexA: number, indexB: number, indexC: number, indexD: number): Vector2[];
     }*/
-      v);
+          v);
   external void addShapeList(List<Shape> shapes, [dynamic options]);
   external void addShape(Shape shape, [dynamic options]);
 }
@@ -8947,21 +8995,21 @@ class ExtrudeBufferGeometry extends BufferGeometry {
 @JS()
 class IcosahedronBufferGeometry extends PolyhedronBufferGeometry {
   // @Ignore
-  IcosahedronBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // IcosahedronBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory IcosahedronBufferGeometry([num radius, num detail]);
 }
 
 @JS()
 class IcosahedronGeometry extends PolyhedronGeometry {
   // @Ignore
-  IcosahedronGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // IcosahedronGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory IcosahedronGeometry([num radius, num detail]);
 }
 
 @JS()
 class LatheBufferGeometry extends BufferGeometry {
   // @Ignore
-  LatheBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // LatheBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory LatheBufferGeometry(List<Vector2> points,
       [num segments, num phiStart, num phiLength]);
   external dynamic
@@ -8973,19 +9021,20 @@ class LatheBufferGeometry extends BufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         points: Vector2[];
         segments: number;
         phiStart: number;
         phiLength: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class LatheGeometry extends Geometry {
   // @Ignore
-  LatheGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // LatheGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory LatheGeometry(List<Vector2> points,
       [num segments, num phiStart, num phiLength]);
   external dynamic
@@ -8997,33 +9046,34 @@ class LatheGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         points: Vector2[];
         segments: number;
         phiStart: number;
         phiLength: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class OctahedronBufferGeometry extends PolyhedronBufferGeometry {
   // @Ignore
-  OctahedronBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // OctahedronBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory OctahedronBufferGeometry([num radius, num detail]);
 }
 
 @JS()
 class OctahedronGeometry extends PolyhedronGeometry {
   // @Ignore
-  OctahedronGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // OctahedronGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory OctahedronGeometry([num radius, num detail]);
 }
 
 @JS()
 class ParametricGeometry extends Geometry {
   // @Ignore
-  ParametricGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // ParametricGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory ParametricGeometry(
       void func(num u, num v, Vector3 dest), num slices, num stacks);
   external dynamic
@@ -9034,18 +9084,19 @@ class ParametricGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         func: (u: number, v: number, dest:Vector3) => void;
         slices: number;
         stacks: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class PlaneBufferGeometry extends BufferGeometry {
   // @Ignore
-  PlaneBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // PlaneBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory PlaneBufferGeometry(num width, num height,
       [num widthSegments, num heightSegments]);
   external dynamic
@@ -9057,19 +9108,20 @@ class PlaneBufferGeometry extends BufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         width: number;
         height: number;
         widthSegments: number;
         heightSegments: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class PlaneGeometry extends Geometry {
   // @Ignore
-  PlaneGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // PlaneGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory PlaneGeometry(num width, num height,
       [num widthSegments, num heightSegments]);
   external dynamic
@@ -9081,19 +9133,20 @@ class PlaneGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         width: number;
         height: number;
         widthSegments: number;
         heightSegments: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class PolyhedronBufferGeometry extends BufferGeometry {
   // @Ignore
-  PolyhedronBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // PolyhedronBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory PolyhedronBufferGeometry(
       List<num> vertices, List<num> indices, num radius, num detail);
   external dynamic
@@ -9105,19 +9158,20 @@ class PolyhedronBufferGeometry extends BufferGeometry {
 	}*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
 		vertices: number[];
 		indices: number[];
 		radius: number;
 		detail: number;
 	}*/
-      v);
+          v);
 }
 
 @JS()
 class PolyhedronGeometry extends Geometry {
   // @Ignore
-  PolyhedronGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // PolyhedronGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory PolyhedronGeometry(List<num> vertices, List<num> indices,
       [num radius, num detail]);
   external dynamic
@@ -9129,13 +9183,14 @@ class PolyhedronGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         vertices: number[];
         indices: number[];
         radius: number;
         detail: number;
     }*/
-      v);
+          v);
   external Sphere get boundingSphere;
   external set boundingSphere(Sphere v);
 }
@@ -9143,7 +9198,7 @@ class PolyhedronGeometry extends Geometry {
 @JS()
 class RingBufferGeometry extends BufferGeometry {
   // @Ignore
-  RingBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // RingBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory RingBufferGeometry(
       [num innerRadius,
       num outerRadius,
@@ -9162,7 +9217,8 @@ class RingBufferGeometry extends BufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         innerRadius: number;
         outerRadius: number;
         thetaSegments: number;
@@ -9170,13 +9226,13 @@ class RingBufferGeometry extends BufferGeometry {
         thetaStart: number;
         thetaLength: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class RingGeometry extends Geometry {
   // @Ignore
-  RingGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // RingGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory RingGeometry(
       [num innerRadius,
       num outerRadius,
@@ -9195,7 +9251,8 @@ class RingGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         innerRadius: number;
         outerRadius: number;
         thetaSegments: number;
@@ -9203,13 +9260,13 @@ class RingGeometry extends Geometry {
         thetaStart: number;
         thetaLength: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class ShapeGeometry extends Geometry {
   // @Ignore
-  ShapeGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // ShapeGeometry.fakeConstructor$() : super.fakeConstructor$();
   /*external factory ShapeGeometry(Shape shape, [dynamic options]);*/
   /*external factory ShapeGeometry(List<Shape> shapes, [dynamic options]);*/
   external factory ShapeGeometry(dynamic /*Shape|List<Shape>*/ shape_shapes,
@@ -9221,7 +9278,7 @@ class ShapeGeometry extends Geometry {
 @JS()
 class ShapeBufferGeometry extends BufferGeometry {
   // @Ignore
-  ShapeBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // ShapeBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory ShapeBufferGeometry(dynamic /*Shape|List<Shape>*/ shapes,
       [num curveSegments]);
 }
@@ -9229,7 +9286,7 @@ class ShapeBufferGeometry extends BufferGeometry {
 @JS()
 class SphereBufferGeometry extends BufferGeometry {
   // @Ignore
-  SphereBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // SphereBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory SphereBufferGeometry(num radius,
       [num widthSegments,
       num heightSegments,
@@ -9249,7 +9306,8 @@ class SphereBufferGeometry extends BufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radius: number;
         widthSegments: number;
         heightSegments: number;
@@ -9258,14 +9316,14 @@ class SphereBufferGeometry extends BufferGeometry {
         thetaStart: number;
         thetaLength: number;
     }*/
-      v);
+          v);
 }
 
 /// A class for generating sphere geometries
 @JS()
 class SphereGeometry extends Geometry {
   // @Ignore
-  SphereGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // SphereGeometry.fakeConstructor$() : super.fakeConstructor$();
 
   /// The geometry is created by sweeping and calculating vertexes around the Y axis (horizontal sweep) and the Z axis (vertical sweep). Thus, incomplete spheres (akin to 'sphere slices') can be created through the use of different values of phiStart, phiLength, thetaStart and thetaLength, in order to define the points in which we start (or end) calculating those vertices.
   external factory SphereGeometry(num radius,
@@ -9287,7 +9345,8 @@ class SphereGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radius: number;
         widthSegments: number;
         heightSegments: number;
@@ -9296,20 +9355,20 @@ class SphereGeometry extends Geometry {
         thetaStart: number;
         thetaLength: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class TetrahedronBufferGeometry extends PolyhedronBufferGeometry {
   // @Ignore
-  TetrahedronBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // TetrahedronBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory TetrahedronBufferGeometry([num radius, num detail]);
 }
 
 @JS()
 class TetrahedronGeometry extends PolyhedronGeometry {
   // @Ignore
-  TetrahedronGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // TetrahedronGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory TetrahedronGeometry([num radius, num detail]);
 }
 
@@ -9346,7 +9405,7 @@ abstract class TextGeometryParameters {
 @JS()
 class TextGeometry extends ExtrudeGeometry {
   // @Ignore
-  TextGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // TextGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory TextGeometry(String text,
       [TextGeometryParameters parameters]);
   external dynamic
@@ -9362,7 +9421,8 @@ class TextGeometry extends ExtrudeGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         font: Font;
         size: number;
         height: number;
@@ -9372,13 +9432,13 @@ class TextGeometry extends ExtrudeGeometry {
         bevelSize: number;
         bevelSegments: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class TextBufferGeometry extends ExtrudeBufferGeometry {
   // @Ignore
-  TextBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // TextBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory TextBufferGeometry(String text,
       [TextGeometryParameters parameters]);
   external dynamic
@@ -9394,7 +9454,8 @@ class TextBufferGeometry extends ExtrudeBufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         font: Font;
         size: number;
         height: number;
@@ -9404,13 +9465,13 @@ class TextBufferGeometry extends ExtrudeBufferGeometry {
         bevelSize: number;
         bevelSegments: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class TorusBufferGeometry extends BufferGeometry {
   // @Ignore
-  TorusBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // TorusBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory TorusBufferGeometry(
       [num radius, num tube, num radialSegments, num tubularSegments, num arc]);
   external dynamic
@@ -9423,20 +9484,21 @@ class TorusBufferGeometry extends BufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radius: number;
         tube: number;
         radialSegments: number;
         tubularSegments: number;
         arc: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class TorusGeometry extends Geometry {
   // @Ignore
-  TorusGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // TorusGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory TorusGeometry(
       [num radius, num tube, num radialSegments, num tubularSegments, num arc]);
   external dynamic
@@ -9449,20 +9511,21 @@ class TorusGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radius: number;
         tube: number;
         radialSegments: number;
         tubularSegments: number;
         arc: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class TorusKnotBufferGeometry extends BufferGeometry {
   // @Ignore
-  TorusKnotBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // TorusKnotBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory TorusKnotBufferGeometry(
       [num radius,
       num tube,
@@ -9483,7 +9546,8 @@ class TorusKnotBufferGeometry extends BufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radius: number;
         tube: number;
         radialSegments: number;
@@ -9492,13 +9556,13 @@ class TorusKnotBufferGeometry extends BufferGeometry {
         q: number;
         heightScale: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class TorusKnotGeometry extends Geometry {
   // @Ignore
-  TorusKnotGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // TorusKnotGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory TorusKnotGeometry(
       [num radius,
       num tube,
@@ -9519,7 +9583,8 @@ class TorusKnotGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         radius: number;
         tube: number;
         radialSegments: number;
@@ -9528,13 +9593,13 @@ class TorusKnotGeometry extends Geometry {
         q: number;
         heightScale: number;
     }*/
-      v);
+          v);
 }
 
 @JS()
 class TubeGeometry extends Geometry {
   // @Ignore
-  TubeGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // TubeGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory TubeGeometry(Curve<Vector3> path,
       [num segments,
       num radius,
@@ -9552,7 +9617,8 @@ class TubeGeometry extends Geometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         path: Curve<Vector3>;
         segments: number;
         radius: number;
@@ -9560,7 +9626,7 @@ class TubeGeometry extends Geometry {
         closed: boolean;
         taper: (u: number) => number; // NoTaper or SinusoidalTaper;
     }*/
-      v);
+          v);
   external List<Vector3> get tangents;
   external set tangents(List<Vector3> v);
   external List<Vector3> get normals;
@@ -9575,7 +9641,7 @@ class TubeGeometry extends Geometry {
 @JS()
 class TubeBufferGeometry extends BufferGeometry {
   // @Ignore
-  TubeBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // TubeBufferGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory TubeBufferGeometry(Curve<Vector3> path,
       [num segments, num radius, num radiusSegments, bool closed]);
   external dynamic
@@ -9588,14 +9654,15 @@ class TubeBufferGeometry extends BufferGeometry {
     }*/
       get parameters;
   external set parameters(
-      dynamic /*{
+      dynamic
+          /*{
         path: Curve<Vector3>;
         segments: number;
         radius: number;
         radialSegments: number;
         closed: boolean;
     }*/
-      v);
+          v);
   external List<Vector3> get tangents;
   external set tangents(List<Vector3> v);
   external List<Vector3> get normals;
@@ -9607,7 +9674,7 @@ class TubeBufferGeometry extends BufferGeometry {
 @JS()
 class WireframeGeometry extends BufferGeometry {
   // @Ignore
-  WireframeGeometry.fakeConstructor$() : super.fakeConstructor$();
+  // WireframeGeometry.fakeConstructor$() : super.fakeConstructor$();
   external factory WireframeGeometry(
       dynamic /*Geometry|BufferGeometry*/ geometry);
 }
@@ -9616,7 +9683,7 @@ class WireframeGeometry extends BufferGeometry {
 @JS()
 class ArrowHelper extends Object3D {
   // @Ignore
-  ArrowHelper.fakeConstructor$() : super.fakeConstructor$();
+  // ArrowHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory ArrowHelper(Vector3 dir,
       [Vector3 origin, num length, num hex, num headLength, num headWidth]);
   external Line get line;
@@ -9631,7 +9698,7 @@ class ArrowHelper extends Object3D {
 @JS()
 class AxesHelper extends LineSegments {
   // @Ignore
-  AxesHelper.fakeConstructor$() : super.fakeConstructor$();
+  // AxesHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory AxesHelper([num size]);
 }
 
@@ -9639,7 +9706,7 @@ class AxesHelper extends LineSegments {
 @JS()
 class BoundingBoxHelper extends Mesh {
   // @Ignore
-  BoundingBoxHelper.fakeConstructor$() : super.fakeConstructor$();
+  // BoundingBoxHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory BoundingBoxHelper([Object3D object, num hex]);
   external Object3D get object;
   external set object(Object3D v);
@@ -9651,7 +9718,7 @@ class BoundingBoxHelper extends Mesh {
 @JS()
 class BoxHelper extends LineSegments {
   // @Ignore
-  BoxHelper.fakeConstructor$() : super.fakeConstructor$();
+  // BoxHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory BoxHelper([Object3D object, Color color]);
   external void update([Object3D object]);
 }
@@ -9659,7 +9726,7 @@ class BoxHelper extends LineSegments {
 @JS()
 class CameraHelper extends LineSegments {
   // @Ignore
-  CameraHelper.fakeConstructor$() : super.fakeConstructor$();
+  // CameraHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory CameraHelper(Camera camera);
   external Camera get camera;
   external set camera(Camera v);
@@ -9671,7 +9738,7 @@ class CameraHelper extends LineSegments {
 @JS()
 class DirectionalLightHelper extends Object3D {
   // @Ignore
-  DirectionalLightHelper.fakeConstructor$() : super.fakeConstructor$();
+  // DirectionalLightHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory DirectionalLightHelper(Light light,
       [num size, dynamic /*Color|String|num*/ color]);
   external Light get light;
@@ -9688,14 +9755,14 @@ class DirectionalLightHelper extends Object3D {
 @JS()
 class EdgesHelper extends LineSegments {
   // @Ignore
-  EdgesHelper.fakeConstructor$() : super.fakeConstructor$();
+  // EdgesHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory EdgesHelper(Object3D object, [num hex, num thresholdAngle]);
 }
 
 @JS()
 class FaceNormalsHelper extends LineSegments {
   // @Ignore
-  FaceNormalsHelper.fakeConstructor$() : super.fakeConstructor$();
+  // FaceNormalsHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory FaceNormalsHelper(Object3D object,
       [num size, num hex, num linewidth]);
   external Object3D get object;
@@ -9708,7 +9775,7 @@ class FaceNormalsHelper extends LineSegments {
 @JS()
 class GridHelper extends LineSegments {
   // @Ignore
-  GridHelper.fakeConstructor$() : super.fakeConstructor$();
+  // GridHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory GridHelper(num size, num divisions,
       [dynamic /*Color|num*/ color1, dynamic /*Color|num*/ color2]);
 
@@ -9720,7 +9787,7 @@ class GridHelper extends LineSegments {
 @JS()
 class HemisphereLightHelper extends Object3D {
   // @Ignore
-  HemisphereLightHelper.fakeConstructor$() : super.fakeConstructor$();
+  // HemisphereLightHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory HemisphereLightHelper(Light light, num sphereSize);
   external Light get light;
   external set light(Light v);
@@ -9735,7 +9802,7 @@ class HemisphereLightHelper extends Object3D {
 @JS()
 class PointLightHelper extends Object3D {
   // @Ignore
-  PointLightHelper.fakeConstructor$() : super.fakeConstructor$();
+  // PointLightHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory PointLightHelper(Light light,
       [num sphereSize, dynamic /*Color|String|num*/ color]);
   external Light get light;
@@ -9751,7 +9818,7 @@ class PointLightHelper extends Object3D {
 @JS()
 class SkeletonHelper extends LineSegments {
   // @Ignore
-  SkeletonHelper.fakeConstructor$() : super.fakeConstructor$();
+  // SkeletonHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory SkeletonHelper(Object3D bone);
   external List<Bone> get bones;
   external set bones(List<Bone> v);
@@ -9764,7 +9831,7 @@ class SkeletonHelper extends LineSegments {
 @JS()
 class SpotLightHelper extends Object3D {
   // @Ignore
-  SpotLightHelper.fakeConstructor$() : super.fakeConstructor$();
+  // SpotLightHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory SpotLightHelper(Light light,
       [dynamic /*Color|String|num*/ color]);
   external Light get light;
@@ -9778,7 +9845,7 @@ class SpotLightHelper extends Object3D {
 @JS()
 class VertexNormalsHelper extends LineSegments {
   // @Ignore
-  VertexNormalsHelper.fakeConstructor$() : super.fakeConstructor$();
+  // VertexNormalsHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory VertexNormalsHelper(Object3D object,
       [num size, num hex, num linewidth]);
   external Object3D get object;
@@ -9791,7 +9858,7 @@ class VertexNormalsHelper extends LineSegments {
 @JS()
 class PlaneHelper extends LineSegments {
   // @Ignore
-  PlaneHelper.fakeConstructor$() : super.fakeConstructor$();
+  // PlaneHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory PlaneHelper(Plane plane, [num size, num hex]);
   external Plane get plane;
   external set plane(Plane v);
@@ -9804,7 +9871,7 @@ class PlaneHelper extends LineSegments {
 @JS()
 class WireframeHelper extends LineSegments {
   // @Ignore
-  WireframeHelper.fakeConstructor$() : super.fakeConstructor$();
+  // WireframeHelper.fakeConstructor$() : super.fakeConstructor$();
   external factory WireframeHelper(Object3D object, [num hex]);
 }
 
@@ -9812,7 +9879,7 @@ class WireframeHelper extends LineSegments {
 @JS()
 class ImmediateRenderObject extends Object3D {
   // @Ignore
-  ImmediateRenderObject.fakeConstructor$() : super.fakeConstructor$();
+  // ImmediateRenderObject.fakeConstructor$() : super.fakeConstructor$();
   external factory ImmediateRenderObject(Material material);
   external Material get material;
   external set material(Material v);
@@ -9867,7 +9934,7 @@ abstract class MorphBlendMeshAnimation {
 @JS()
 class MorphBlendMesh extends Mesh {
   // @Ignore
-  MorphBlendMesh.fakeConstructor$() : super.fakeConstructor$();
+  // MorphBlendMesh.fakeConstructor$() : super.fakeConstructor$();
   external factory MorphBlendMesh(Geometry geometry, Material material);
   external dynamic /*JSMap of <String,MorphBlendMeshAnimation>*/ get animationsMap;
   external set animationsMap(

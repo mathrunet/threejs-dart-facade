@@ -53,7 +53,7 @@ abstract class SpriteCanvasMaterialParameters implements MaterialParameters {
 @JS()
 class SpriteCanvasMaterial extends Material {
   // @Ignore
-  SpriteCanvasMaterial.fakeConstructor$() : super.fakeConstructor$();
+  // SpriteCanvasMaterial.fakeConstructor$() : super.fakeConstructor$();
   external factory SpriteCanvasMaterial(
       [SpriteCanvasMaterialParameters parameters]);
   external Color get color;
@@ -77,7 +77,7 @@ abstract class CanvasRendererParameters {
 @JS()
 class CanvasRenderer implements Renderer {
   // @Ignore
-  CanvasRenderer.fakeConstructor$();
+  // CanvasRenderer.fakeConstructor$();
   external factory CanvasRenderer([CanvasRendererParameters parameters]);
   external CanvasElement get domElement;
   external set domElement(CanvasElement v);

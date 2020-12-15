@@ -8,7 +8,7 @@ import "three_core.dart"
 @JS()
 class RenderPass {
   // @Ignore
-  RenderPass.fakeConstructor$();
+  // RenderPass.fakeConstructor$();
   external factory RenderPass(Scene scene, Camera camera,
       [Material overrideMaterial,
       dynamic /*Color|String|num*/ clearColor,

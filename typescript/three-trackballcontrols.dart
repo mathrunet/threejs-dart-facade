@@ -8,7 +8,7 @@ import "dart:html" show HtmlElement;
 @JS()
 class TrackballControls extends EventDispatcher {
   // @Ignore
-  TrackballControls.fakeConstructor$() : super.fakeConstructor$();
+  // TrackballControls.fakeConstructor$() : super.fakeConstructor$();
   external factory TrackballControls(Camera object, [HtmlElement domElement]);
   external Camera get object;
   external set object(Camera v);

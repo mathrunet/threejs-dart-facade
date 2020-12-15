@@ -8,7 +8,7 @@ import "dart:html" show HtmlElement;
 @JS()
 class CSS3DObject extends Object3D {
   // @Ignore
-  CSS3DObject.fakeConstructor$() : super.fakeConstructor$();
+  // CSS3DObject.fakeConstructor$() : super.fakeConstructor$();
   external factory CSS3DObject(dynamic element);
   external dynamic get element;
   external set element(dynamic v);
@@ -17,7 +17,7 @@ class CSS3DObject extends Object3D {
 @JS()
 class CSS3DSprite extends CSS3DObject {
   // @Ignore
-  CSS3DSprite.fakeConstructor$() : super.fakeConstructor$();
+  // CSS3DSprite.fakeConstructor$() : super.fakeConstructor$();
   external factory CSS3DSprite(dynamic element);
 }
 
@@ -26,7 +26,7 @@ class CSS3DSprite extends CSS3DObject {
 @JS()
 class CSS3DRenderer {
   // @Ignore
-  CSS3DRenderer.fakeConstructor$();
+  // CSS3DRenderer.fakeConstructor$();
   external factory CSS3DRenderer();
   external HtmlElement get domElement;
   external set domElement(HtmlElement v);

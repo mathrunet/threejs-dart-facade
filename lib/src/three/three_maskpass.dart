@@ -7,7 +7,7 @@ import "three_core.dart" show Scene, Camera, WebGLRenderer, WebGLRenderTarget;
 @JS()
 class MaskPass {
   // @Ignore
-  MaskPass.fakeConstructor$();
+  // MaskPass.fakeConstructor$();
   external factory MaskPass(Scene scene, Camera camera);
   external Scene get scene;
   external set scene(Scene v);
@@ -28,7 +28,7 @@ class MaskPass {
 @JS()
 class ClearMaskPass {
   // @Ignore
-  ClearMaskPass.fakeConstructor$();
+  // ClearMaskPass.fakeConstructor$();
   external factory ClearMaskPass();
   external bool get enabled;
   external set enabled(bool v);

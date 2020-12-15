@@ -7,7 +7,7 @@ import "three_core.dart" show Loader;
 @JS()
 class CTMLoader extends Loader {
   // @Ignore
-  CTMLoader.fakeConstructor$() : super.fakeConstructor$();
+  // CTMLoader.fakeConstructor$() : super.fakeConstructor$();
   external factory CTMLoader();
 
   /// load multiple CTM parts defined in JSON.

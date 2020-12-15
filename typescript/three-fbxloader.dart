@@ -9,7 +9,7 @@ import "dart:html" show ProgressEvent, ErrorEvent;
 @JS()
 class FBXLoader {
   // @Ignore
-  FBXLoader.fakeConstructor$();
+  // FBXLoader.fakeConstructor$();
   external factory FBXLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);

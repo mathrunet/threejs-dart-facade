@@ -8,7 +8,7 @@ import "three_shaderpass.dart" show ShaderPass;
 @JS()
 class EffectComposer {
   // @Ignore
-  EffectComposer.fakeConstructor$();
+  // EffectComposer.fakeConstructor$();
   external factory EffectComposer(WebGLRenderer renderer,
       [WebGLRenderTarget renderTarget]);
   external WebGLRenderTarget get renderTarget1;
@@ -34,7 +34,7 @@ class EffectComposer {
 @JS()
 class Pass {
   // @Ignore
-  Pass.fakeConstructor$();
+  // Pass.fakeConstructor$();
 
   /// if set to true, the pass is processed by the composer
   external bool get enabled;

@@ -10,7 +10,7 @@ import "three_core.dart" show Renderer, Scene, Camera, Matrix4;
 @JS()
 class VREffect {
   // @Ignore
-  VREffect.fakeConstructor$();
+  // VREffect.fakeConstructor$();
   external factory VREffect(Renderer renderer, [void callback(String params)]);
   external void render(Scene scene, Camera camera);
   external void setSize(num width, num height);

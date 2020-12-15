@@ -10,7 +10,7 @@ import "three_core.dart" show Camera;
 @JS()
 class VRControls {
   // @Ignore
-  VRControls.fakeConstructor$();
+  // VRControls.fakeConstructor$();
   external factory VRControls(Camera camera, [void callback(String param)]);
 
   /// Update VR Instance Tracking

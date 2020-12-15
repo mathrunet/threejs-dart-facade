@@ -9,7 +9,7 @@ import "three-core.dart"
 @JS()
 class RenderableObject {
   // @Ignore
-  RenderableObject.fakeConstructor$();
+  // RenderableObject.fakeConstructor$();
   external factory RenderableObject();
   external num get id;
   external set id(num v);
@@ -22,7 +22,7 @@ class RenderableObject {
 @JS()
 class RenderableFace {
   // @Ignore
-  RenderableFace.fakeConstructor$();
+  // RenderableFace.fakeConstructor$();
   external factory RenderableFace();
   external num get id;
   external set id(num v);
@@ -51,7 +51,7 @@ class RenderableFace {
 @JS()
 class RenderableVertex {
   // @Ignore
-  RenderableVertex.fakeConstructor$();
+  // RenderableVertex.fakeConstructor$();
   external factory RenderableVertex();
   external Vector3 get position;
   external set position(Vector3 v);
@@ -67,7 +67,7 @@ class RenderableVertex {
 @JS()
 class RenderableLine {
   // @Ignore
-  RenderableLine.fakeConstructor$();
+  // RenderableLine.fakeConstructor$();
   external factory RenderableLine();
   external num get id;
   external set id(num v);
@@ -86,7 +86,7 @@ class RenderableLine {
 @JS()
 class RenderableSprite {
   // @Ignore
-  RenderableSprite.fakeConstructor$();
+  // RenderableSprite.fakeConstructor$();
   external factory RenderableSprite();
   external num get id;
   external set id(num v);
@@ -110,7 +110,7 @@ class RenderableSprite {
 @JS()
 class Projector {
   // @Ignore
-  Projector.fakeConstructor$();
+  // Projector.fakeConstructor$();
   external factory Projector();
 
   /// deprecated.

@@ -12,7 +12,7 @@ abstract class ColladaLoaderReturnType {}
 @JS()
 class ColladaModel {
   // @Ignore
-  ColladaModel.fakeConstructor$();
+  // ColladaModel.fakeConstructor$();
   external List<dynamic> get animations;
   external set animations(List<dynamic> v);
   external dynamic get kinematics;
@@ -26,7 +26,7 @@ class ColladaModel {
 @JS()
 class ColladaLoader {
   // @Ignore
-  ColladaLoader.fakeConstructor$();
+  // ColladaLoader.fakeConstructor$();
   external factory ColladaLoader();
   external void load(String url, void onLoad(ColladaModel model),
       [void onProgress(ProgressEvent request), void onError(ErrorEvent event)]);

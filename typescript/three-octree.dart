@@ -7,7 +7,7 @@ import "three-core.dart" show Vector3;
 @JS()
 class Octree {
   // @Ignore
-  Octree.fakeConstructor$();
+  // Octree.fakeConstructor$();
   external factory Octree([dynamic parameters]);
   external void update();
   external dynamic add(dynamic object, [dynamic options]);

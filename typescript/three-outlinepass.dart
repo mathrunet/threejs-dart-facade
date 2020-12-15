@@ -7,7 +7,7 @@ import "three-core.dart" show Vector2, Scene, Camera, Object3D, Color;
 @JS()
 class OutlinePass {
   // @Ignore
-  OutlinePass.fakeConstructor$();
+  // OutlinePass.fakeConstructor$();
   external factory OutlinePass(Vector2 size, Scene scene, Camera camer,
       [List<Object3D> selectedObjects]);
   external List<Object3D> get selectedObjects;

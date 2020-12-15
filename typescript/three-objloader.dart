@@ -10,7 +10,7 @@ import "three-mtlloader.dart" show MaterialCreator;
 @JS()
 class OBJLoader {
   // @Ignore
-  OBJLoader.fakeConstructor$();
+  // OBJLoader.fakeConstructor$();
   external factory OBJLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);

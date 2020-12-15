@@ -30,7 +30,7 @@ abstract class Dds {
 @JS()
 class DDSLoader extends CompressedTextureLoader {
   // @Ignore
-  DDSLoader.fakeConstructor$() : super.fakeConstructor$();
+  // DDSLoader.fakeConstructor$() : super.fakeConstructor$();
   external factory DDSLoader();
   external Dds parse(String buffer, bool loadMipmaps);
 }

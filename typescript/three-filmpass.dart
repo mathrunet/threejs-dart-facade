@@ -8,7 +8,7 @@ import "three-core.dart" show Scene, Camera, IUniform, Material, Mesh;
 @JS()
 class FilmPass extends Pass {
   // @Ignore
-  FilmPass.fakeConstructor$() : super.fakeConstructor$();
+  // FilmPass.fakeConstructor$() : super.fakeConstructor$();
   external factory FilmPass(num noiseIntensity, num scanlinesIntensity,
       num scanlinesCount, bool grayscale);
   external Scene get scene;

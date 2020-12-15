@@ -8,7 +8,7 @@ import "dart:html" show HtmlElement;
 @JS()
 class OrthographicTrackballControls extends EventDispatcher {
   // @Ignore
-  OrthographicTrackballControls.fakeConstructor$() : super.fakeConstructor$();
+  // OrthographicTrackballControls.fakeConstructor$() : super.fakeConstructor$();
   external factory OrthographicTrackballControls(Camera object,
       [HtmlElement domElement]);
   external Camera get object;

@@ -15,7 +15,7 @@ import "three-core.dart"
 @JS()
 class ShaderPass {
   // @Ignore
-  ShaderPass.fakeConstructor$();
+  // ShaderPass.fakeConstructor$();
   external factory ShaderPass(Shader shader, [String textureID]);
   external String get textureID;
   external set textureID(String v);

@@ -10,7 +10,7 @@ import "dart:html" show ProgressEvent, ErrorEvent;
 @JS()
 class MTLLoader extends EventDispatcher {
   // @Ignore
-  MTLLoader.fakeConstructor$() : super.fakeConstructor$();
+  // MTLLoader.fakeConstructor$() : super.fakeConstructor$();
   external factory MTLLoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
@@ -37,7 +37,7 @@ class MTLLoader extends EventDispatcher {
 @JS()
 class MaterialCreator {
   // @Ignore
-  MaterialCreator.fakeConstructor$();
+  // MaterialCreator.fakeConstructor$();
   external factory MaterialCreator([String baseUrl, dynamic options]);
   external String get baseUrl;
   external set baseUrl(String v);

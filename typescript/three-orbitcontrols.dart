@@ -8,7 +8,7 @@ import "dart:html" show HtmlElement, HtmlDocument;
 @JS()
 class OrbitControls {
   // @Ignore
-  OrbitControls.fakeConstructor$();
+  // OrbitControls.fakeConstructor$();
   external factory OrbitControls(Camera object, [HtmlElement domElement]);
   external Camera get object;
   external set object(Camera v);

@@ -8,7 +8,7 @@ import "dart:html" show HtmlElement;
 @JS()
 class TransformControls extends Object3D {
   // @Ignore
-  TransformControls.fakeConstructor$() : super.fakeConstructor$();
+  // TransformControls.fakeConstructor$() : super.fakeConstructor$();
   external factory TransformControls(Camera object, [HtmlElement domElement]);
   external num get size;
   external set size(num v);

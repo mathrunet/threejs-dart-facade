@@ -8,7 +8,7 @@ import "dart:html" show HtmlElement;
 @JS()
 class EditorControls extends EventDispatcher {
   // @Ignore
-  EditorControls.fakeConstructor$() : super.fakeConstructor$();
+  // EditorControls.fakeConstructor$() : super.fakeConstructor$();
   external factory EditorControls(Camera object, [HtmlElement domElement]);
   external bool get enabled;
   external set enabled(bool v);

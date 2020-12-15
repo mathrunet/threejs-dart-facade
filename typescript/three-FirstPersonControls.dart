@@ -8,7 +8,7 @@ import "dart:html" show HtmlElement, CanvasElement, HtmlDocument;
 @JS()
 class FirstPersonControls {
   // @Ignore
-  FirstPersonControls.fakeConstructor$();
+  // FirstPersonControls.fakeConstructor$();
   external factory FirstPersonControls(Camera object, [HtmlElement domElement]);
   external Object3D get object;
   external set object(Object3D v);

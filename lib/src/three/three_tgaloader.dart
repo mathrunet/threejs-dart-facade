@@ -9,7 +9,7 @@ import "dart:html" show ProgressEvent, ErrorEvent;
 @JS()
 class TGALoader {
   // @Ignore
-  TGALoader.fakeConstructor$();
+  // TGALoader.fakeConstructor$();
   external factory TGALoader([LoadingManager manager]);
   external LoadingManager get manager;
   external set manager(LoadingManager v);
