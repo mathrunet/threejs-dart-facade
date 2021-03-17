@@ -15,7 +15,7 @@ import "dart:typed_data"
         Int32List,
         Uint32List,
         Float64List;
-import "package:func2/func.dart";
+import 'package:threejs_facade/func2/func.dart';
 import "dart:html"
     show
         CanvasElement,
@@ -6664,7 +6664,7 @@ class WebGLRenderer implements Renderer {
   /// The render is done to the renderTarget (if specified) or to the canvas as usual.
   /// If forceClear is true, the canvas will be cleared before rendering, even if the renderer's autoClear property is false.
   external void render(Scene scene, Camera camera,
-      [RenderTarget renderTarget, bool forceClear]);
+      [RenderTarget? renderTarget, bool? forceClear]);
   external void setTexture(Texture texture, num slot);
   external void setTexture2D(Texture texture, num slot);
   external void setTextureCube(Texture texture, num slot);
